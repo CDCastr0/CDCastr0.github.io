@@ -3,6 +3,7 @@
 
 ### Education
 B.A. Religious Studies, Southern Methodist University 2023
+
 M.S. Data Science, Southern Methodist University (in-progress)
 
 ### Work Experience
