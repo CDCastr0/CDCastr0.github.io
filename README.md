@@ -1,4 +1,3 @@
-# CDCastr0.github.io
 # Data Scientist
 
 ### Education
