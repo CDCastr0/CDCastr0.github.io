@@ -78,22 +78,29 @@ For the second linear model, we used a provided outline for a multiple linear re
 SalePrice=β_0+β_1×GrLivArea+β_2×FullBath+
 where: - β_0 is the intercept term, - β_1 is the coefficient for GrLivArea, and - β_2 is the coefficient for FullBath
  Addressing the assumptions, the multiple linear regression fits the necessary assumptions of linear regression even better. The residuals show a stronger degree of normality and homoscedasticity than the previous model, though still slightly less than ideal. The Model appears to have residuals that slightly grow in variance as the fitted values increase. Additionally, we still have some values that appear to have individually slightly high cook’s D values, however the highest of these have been reduced from 0.08 to approximately 0.06. The linear relationship is demonstrated more strongly here than in the previous model.
+  
 Linear Model 3
 The final model we were asked to construct was an additional multiple linear regression model. In constructing this model, we first visually compared several of the available metrics as predictor variables for price in simple scatterplots. When we looked at LotArea, we found something rather interesting. As demonstrated in the scatterplots below (figures 9 through 12 in the Appendix), LotArea appears to have a steep linear relationship with SalePrice, save for some interesting exceptions. One value had an immense area of over 200,000 square feet, but was sold for much lower than other, much smaller properties. Visually, it appears as if there are two linear relationships within this scatterplot. 
 Immediately this had us questioning what it was about those occasional large properties that made them worth less than the most expensive homes. After visually comparing the data with many other variables, we determined that the best additional predictors to include were GrLivArea, in order to control for it because it seemed to be partially collinear with LotArea, as well as LandSlope and LandContour. As demonstrated by figures 9 through 12, LandSlope and LandContour appeared to be strong predictors for why the larger properties weren’t worth as much as some smaller ones. The large, relatively inexpensive properties were almost all banked, meaning the property had a quick and significant rise from street grade to building. Many of them were also categorized as having ‘severe’ slope. By finding this apparent relationship between the slope/contour of the land and the sale price within the relationship of Lot Area to sale price, we continued with the construction of the model. After a first iteration yielded some values that were not statistically significant, we created a more robust second version.
 Below is the output of the second iteration of our model. We determined that whether or not a property was ‘Banked’ was an incredibly significant predictor, As well as the interaction between LotArea and LandSlope. The output of running the model, with all predictors and interaction terms, is below. The linear model equation can be expressed as:
+ 
 SalePrice=β_0+β_1×GrLivArea+β_2×LotArea+β_3×Banked+β_4×(GrLivArea×Moderate)+β_5×(LotArea×LandSlope)+β_6×(GrLivArea×Banked)+β_7×(LotArea×Banked)
+ 
 where: β_0 is the intercept term, β_1 is the coefficient for GrLivArea, β_2 is the coefficient for LotArea, β_3 is the coefficient for Banked, - β_4 is the coefficient for GrLivArea×Moderate Slope,  β_5 is the coefficient for LotArea×LandSlope, β_6 is the coefficient for GrLivArea×Banked, and β_7 is the coefficient for LotArea×Banked.
- 	Addressing the assumptions of this model, the first thing we can notice is that it is much better in meeting the normality of residuals assumption than the previous two models. Additionally, while it still is not perfect in this area, it has a higher degree of homoscedasticity, when visually comparing the residuals vs fitted values to the previous models. One thing to note, however, is the relatively high Cook’s D value of some of these influential points. Some points have a Cook’s D of approximately 0.4, which is much higher than the rest. We must again proceed with caution with this model.
-After running all three linear regression models, we must find the Adjusted R^2, CV Press, and Kaggle scores of the models to see which one was the best. Our CV Press scores were calculated in SAS, and the code to find all fo these values will be in the appendix.
+ 
+   Addressing the assumptions of this model, the first thing we can notice is that it is much better in meeting the normality of residuals assumption than the previous two models. Additionally, while it still is not perfect in this area, it has a higher degree of homoscedasticity, when visually comparing the residuals vs fitted values to the previous models. One thing to note, however, is the relatively high Cook’s D value of some of these influential points. Some points have a Cook’s D of approximately 0.4, which is much higher than the rest. We must again proceed with caution with this model.
+	
+ After running all three linear regression models, we must find the Adjusted R^2, CV Press, and Kaggle scores of the models to see which one was the best. Our CV Press scores were calculated in SAS, and the code to find all of these values will be in the appendix.
+  
 Predictive Models	Adjusted R2	CV PRESS	Kaggle Score
 Simple Linear Regression	0.2704971	153.891	.33906
 Multiple Linear Regression	0.5231282	4.4258e+12	.28586
 Custom MLR Model	0.5707977	4.0913e+12	.28449
-Above is the final table comparing the three models. The CV Press values for the first and third values seem exceptionally high. However, seeing as the Adjusted R^2 continues to increase as we go down the list, and the Kaggle score continues to decrease, our final recommendation is to use the third model, our formulated multiple linear regression model, in order to predict sale price in Ames. All in all, each model is not without its flaws, and more time must be spent to determine a truly ideal model, however, by carefully observing relationships, we can demonstrate that our ability to predict the sale price will only increase.
+ 
+ Above is the final table comparing the three models. The CV Press values for the first and third values seem exceptionally high. However, seeing as the Adjusted R^2 continues to increase as we go down the list, and the Kaggle score continues to decrease, our final recommendation is to use the third model, our formulated multiple linear regression model, in order to predict sale price in Ames. All in all, each model is not without its flaws, and more time must be spent to determine a truly ideal model, however, by carefully observing relationships, we can demonstrate that our ability to predict the sale price will only increase.
  
 ## Appendix:
-'''Max Pagan and Christian Castro
+<'''Max Pagan and Christian Castro
 Analysis 1
 ChatGPT was utilized for specific functions, error solving, and commenting for documentation'''
 
@@ -638,6 +645,4 @@ class LandSlope;
 class LandContour;
    model SalePrice = GrLivArea LotArea Banked GrLivArea*Moderate
                     LotArea*LandSlope GrLivArea*Banked LotArea*Banked / selection=Forward(stop=CV) cvmethod = random(5) stats = adjrsq;
-run;
-
-
+run;>
