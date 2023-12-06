@@ -1,16 +1,16 @@
-#Ames, Iowa housing analysis for Century 21 Ames
+# Ames, Iowa housing analysis for Century 21 Ames
 
-###Researchers:
+### Researchers:
 Max Pagan - AMaxpagan.github.io
 Christian Castro - CDCastr0.github.io
 
-##Introduction:
+## Introduction:
 The purpose of this analysis is to understand the housing market of Ames, Iowa, and determine a model that accurately predicts the sale price of homes in the area for Century 21 Ames (which is a real estate company). The accuracy of each model is judged by the Root-Mean-Squared-Error (RMSE) for predictions vs the actual sale price, which means that the model with the least error is more accurate. These models are crafted using some of the 79 variables to choose from and proceed in one of two ways: 1) Predicting the prices of homes in NAmes, Edwards and BrkSide neighborhoods through finding the relationship between square footage of the home (in 100 sq.ft. increments) and location. This model will provide estimates for the client as well as a confidence interval for the estimates. 2) Predicting the sale prices of homes in all of Ames, doing so through 3 competing models: a simple linear regression model, a multiple linear regression model using sale price, living area, and bathroom count, alongside a third model using lot area, living area, land contour, and land slope. Each model is verified using R^2, CV Press, and Kaggle Score.
 
-##Data Description:
+## Data Description:
 	The data comes from the Kaggle website where it is part of an ongoing competition to predict the sale value of houses in the Ames, Iowa area. The data consists of four files: train.csv, test.csv, data_description.txt, and sample_submission.csv. With 79 variables contained in the train dataset, it would be an understatement to say that listing and describing all of them is excessive. The most relevant variables are: “Sale Price” or a property’s sale price in dollars (to be predicted), “neighborhood” or the physical location within the city of Ames, “GrLivArea” or the above ground living area in square feet, “FullBath” or full bathrooms above ground, “LotArea” or lot size in square feet, “LandContour” or flatness of the property, and “LandSlope” or the slope of the property. The training data has 1460 different homes to study as well as an additional 1459 to predict in the test file. For further information, the data can be found on the kaggle website. 
  
-##Analysis Question 1:
+## Analysis Question 1:
 In this analysis, we ventured to find a model that predicted the sale price of homes in the neighborhoods of NAmes, Edwards, and BrkSide using simple linear regression. The way to find this is through understanding the relationship between a couple factors: square footage above ground and neighborhood location of the house. We sought to provide information like average sale price by square footage in increments of 100 sq. ft., and confidence intervals for the estimates while addressing anomalies in the data. 
 The model consists of: 
 SalePrice ~ GrLivArea * Neighborhood
@@ -36,10 +36,10 @@ The results of the linear regression analysis is that there is statistical evide
 	Based on the model, the starting sale price for a home in the BrkSide neighborhood is $19,971.51, but with 95% confidence between $-4,314.21 to $44,257.24. In the Edwards neighborhood, starting sale prices are $68,381.59, but with 95% confidence between $40,913.67 to $95.849.51. For the NAmes neighborhood, sales begin at a baseline of $54,704.89, but with 95% confidence between $27,408.38 to $82,001.39. Each additional 100 square feet in living area is associated with an increase of $8716 with 95% confidence between $6793 to $10640.
 	The analysis suggests that both the living area and neighborhood significantly influence house prices in Ames, Iowa. The confidence intervals suggest a high degree of certainty about these effects. While there are differences between neighborhoods, these findings provide insights into the relationships between different variables and how they play into home sale prices. This information can be very valuable for real estate pricing strategies in Ames and we hope Century 21 considers our models. 
  
-##RShiny: 
+## RShiny: 
  At this link, you can find the RShiny app we have made that allows you to observe the linear relationship begtween GrLivArea and SalePrice for any neighborhood you choose, and you can enhance the scatterplot by adding a best fit line!
 https://amaxpagan.shinyapps.io/RShinyApp/ 
-##Analysis 2:
+## Analysis 2:
 For Analysis 2, we were asked to find the most effective predictive model for home sales prices in Ames, Iowa, encompassing all neighborhoods using Linear regression. We will be comparing three linear regression models to do this: first, we will use a simple linear regression model. Next, we will use a provided multiple linear regression model. Then, we will employ a final multiple linear regression model of our own design.
 Linear Model 1
 The first linear model we were instructed to create was a simple linear regression with one predictor variable predicting our dependent variable of SalePrice. We decided to perform a log transformation on the year the home was built, YearBuilt, and use that transformation as the independent variable.
@@ -68,7 +68,7 @@ Multiple Linear Regression	0.5231282	4.4258e+12	.28586
 Custom MLR Model	0.5707977	4.0913e+12	.28449
 Above is the final table comparing the three models. The CV Press values for the first and third values seem exceptionally high. However, seeing as the Adjusted R^2 continues to increase as we go down the list, and the Kaggle score continues to decrease, our final recommendation is to use the third model, our formulated multiple linear regression model, in order to predict sale price in Ames. All in all, each model is not without its flaws, and more time must be spent to determine a truly ideal model, however, by carefully observing relationships, we can demonstrate that our ability to predict the sale price will only increase.
  
-##Appendix:
+## Appendix:
 '''Max Pagan and Christian Castro
 Analysis 1
 ChatGPT was utilized for specific functions, error solving, and commenting for documentation'''
