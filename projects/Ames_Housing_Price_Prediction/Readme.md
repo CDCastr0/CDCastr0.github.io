@@ -73,22 +73,22 @@ Above is the final table comparing the three models. The CV Press values for the
 Analysis 1
 ChatGPT was utilized for specific functions, error solving, and commenting for documentation'''
 
-'#' dplyr for data manipulation
+# dplyr for data manipulation
 library(dplyr)
-'#' ggplot2 for data visualization
+# ggplot2 for data visualization
 library(ggplot2)
-'#' car for diagnostic plots
+# car for diagnostic plots
 library(car)
-'#' boot for cross validation
+# boot for cross validation
 library(boot)
 
-'#' Load the dataset
+# Load the dataset
 data <- read.csv(choose.files())
 
-'#' Focus on the three specified neighborhoods
+# Focus on the three specified neighborhoods
 filtered_data <- filter(data, Neighborhood %in% c("NAmes", "Edwards", "BrkSide"))
 
-'#' Check for missing data in predictors and the response variable
+# Check for missing data in predictors and the response variable
 sum(is.na(filtered_data$SalePrice))
 sum(is.na(filtered_data$GrLivArea))
 sum(is.na(filtered_data$Neighborhood))
