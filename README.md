@@ -1,15 +1,19 @@
 # Data Scientist
 
 ### Education
-B.A. Religious Studies, Southern Methodist University 2023
+- B.A., Religious Studies | Southern Methodist University (_2023_)
 
-M.S. Data Science, Southern Methodist University (in-progress)
+-    M.S., Data Science   | Southern Methodist University (_in-progress_)
 
 ### Work Experience
-IT Help Desk Student Worker Team Lead @ SMU OIT
-- August 2019 - present
-- became team lead in 2021
+**IT Help Desk Student Worker Team Lead @ SMU OIT (_August 2019 - Present_)**
+- Became team lead in 2021
+- Became proficienct in customer service and using ticket-based systems
+- Honed my troubleshooting and problem solving skills
 
 ### Projects
-- Beer case study
-- Ames, Iowa Housing project 
+- Beer Case Study
+Analyzed trends in market data to propose to a hypothetical client. Used foundational analytical methods in R to suggest a strategy to reach underserved niches by identifying the relationship between IBU and ABV, as well as identifying areas with the most craft beer culture. 
+- Ames, Iowa Housing project
+Used both Simple and Multiple Linear Regression to propose a solution to the Kaggle Ames Housing Price Prediction competition. My partner Max Pagan and I found models that predicted price via SLR and MLR as well as built an RShiny App to display home prices based on neighborhood. 
+![Kaggle Overview](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data?select=train.csv)
