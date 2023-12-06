@@ -7,8 +7,10 @@
 
 ### Work Experience
 **IT Help Desk Student Worker Team Lead @ SMU OIT (_August 2019 - Present_)**
-- became team lead in 2021
+- Became team lead in 2021
+- Became proficienct in customer service and using ticket-based systems
+- Honed my troubleshooting and problem solving skills
 
 ### Projects
-- Beer case study
+- Beer Case Study
 - Ames, Iowa Housing project 
