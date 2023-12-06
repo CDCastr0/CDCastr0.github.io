@@ -1,8 +1,10 @@
 # Ames, Iowa housing analysis for Century 21 Ames
 
 ### Researchers:
-Max Pagan - AMaxpagan.github.io
 Christian Castro - CDCastr0.github.io
+ 
+Max Pagan - AMaxpagan.github.io
+
 
 ## Introduction:
 The purpose of this analysis is to understand the housing market of Ames, Iowa, and determine a model that accurately predicts the sale price of homes in the area for Century 21 Ames (which is a real estate company). The accuracy of each model is judged by the Root-Mean-Squared-Error (RMSE) for predictions vs the actual sale price, which means that the model with the least error is more accurate. 
