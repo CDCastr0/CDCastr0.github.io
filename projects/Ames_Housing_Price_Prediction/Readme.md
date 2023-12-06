@@ -5,13 +5,20 @@ Max Pagan - AMaxpagan.github.io
 Christian Castro - CDCastr0.github.io
 
 ## Introduction:
-The purpose of this analysis is to understand the housing market of Ames, Iowa, and determine a model that accurately predicts the sale price of homes in the area for Century 21 Ames (which is a real estate company). The accuracy of each model is judged by the Root-Mean-Squared-Error (RMSE) for predictions vs the actual sale price, which means that the model with the least error is more accurate. These models are crafted using some of the 79 variables to choose from and proceed in one of two ways: 1) Predicting the prices of homes in NAmes, Edwards and BrkSide neighborhoods through finding the relationship between square footage of the home (in 100 sq.ft. increments) and location. This model will provide estimates for the client as well as a confidence interval for the estimates. 2) Predicting the sale prices of homes in all of Ames, doing so through 3 competing models: a simple linear regression model, a multiple linear regression model using sale price, living area, and bathroom count, alongside a third model using lot area, living area, land contour, and land slope. Each model is verified using R^2, CV Press, and Kaggle Score.
+The purpose of this analysis is to understand the housing market of Ames, Iowa, and determine a model that accurately predicts the sale price of homes in the area for Century 21 Ames (which is a real estate company). The accuracy of each model is judged by the Root-Mean-Squared-Error (RMSE) for predictions vs the actual sale price, which means that the model with the least error is more accurate. 
+
+These models are crafted using some of the 79 variables to choose from and proceed in one of two ways: 1) Predicting the prices of homes in NAmes, Edwards and BrkSide neighborhoods through finding the relationship between square footage of the home (in 100 sq.ft. increments) and location. This model will provide estimates for the client as well as a confidence interval for the estimates. 2) Predicting the sale prices of homes in all of Ames, doing so through 3 competing models: a simple linear regression model, a multiple linear regression model using sale price, living area, and bathroom count, alongside a third model using lot area, living area, land contour, and land slope. Each model is verified using R^2, CV Press, and Kaggle Score.
+
 
 ## Data Description:
-The data comes from the Kaggle website where it is part of an ongoing competition to predict the sale value of houses in the Ames, Iowa area.The data consists of four files: train.csv, test.csv, data_description.txt, and sample_submission.csv. With 79 variables contained in the train dataset, it would be an understatement to say that listing and describing all of them is excessive. The most relevant variables are: “Sale Price” or a property’s sale price in dollars (to be predicted), “neighborhood” or the physical location within the city of Ames, “GrLivArea” or the above ground living area in square feet, “FullBath” or full bathrooms above ground, “LotArea” or lot size in square feet, “LandContour” or flatness of the property, and “LandSlope” or the slope of the property. The training data has 1460 different homes to study as well as an additional 1459 to predict in the test file. For further information, the data can be found on the kaggle website. 
- 
+The data comes from the Kaggle website where it is part of an ongoing competition to predict the sale value of houses in the Ames, Iowa area.The data consists of four files: train.csv, test.csv, data_description.txt, and sample_submission.csv. With 79 variables contained in the train dataset, it would be an understatement to say that listing and describing all of them is excessive. 
+
+The most relevant variables are: “Sale Price” or a property’s sale price in dollars (to be predicted), “neighborhood” or the physical location within the city of Ames, “GrLivArea” or the above ground living area in square feet, “FullBath” or full bathrooms above ground, “LotArea” or lot size in square feet, “LandContour” or flatness of the property, and “LandSlope” or the slope of the property. The training data has 1460 different homes to study as well as an additional 1459 to predict in the test file. For further information, the data can be found on the kaggle website. 
+
+ 
 ## Analysis Question 1:
 In this analysis, we ventured to find a model that predicted the sale price of homes in the neighborhoods of NAmes, Edwards, and BrkSide using simple linear regression. The way to find this is through understanding the relationship between a couple factors: square footage above ground and neighborhood location of the house. We sought to provide information like average sale price by square footage in increments of 100 sq. ft., and confidence intervals for the estimates while addressing anomalies in the data. 
+
 The model consists of: 
 SalePrice ~ GrLivArea * Neighborhood
  As a start, it’s important to check the assumptions of simple linear regression. The assumptions are:
@@ -24,31 +31,48 @@ Figure 3: “residuals vs leverage” and “Scale location” have features tha
 	Normality (residuals are normally distributed)
 The “residuals vs fitted” chart lends evidence that the residuals are normally distributed, except for the higher values of the x-axis. 
 In order to proceed with SLR, the outlier will have to be handled. Because of the high Cook’s D and leverage of a few extreme values in Figure 3, we concluded that the simplest and most effective solution would be to identify and remove values above a certain threshold (more info can be found within the comments of the codebook). 
+
 The results are shown in Figure 4 as the values are transformed and provide much more appropriate results towards the assumptions of SLR. 
 To compare the SLR model, we will see how it performs against Adjusted-R^2 and Internal Cross Validation Predicted Residual Error Sum of Squares. 
 Adjusted R-squared for the simple model was 0.3917
 Adjusted R-squared for the complex model was 0.4400
 CV PRESS for the simple model was 3.64 * 10^11
 CV PRESS for the complex model was 3.41 * 10^11
+
 With these scores in mind, it appears that the complex model is a more accurate model, meaning that the inclusion of the interaction between “GrLivArea” and “Neighborhood” improves the model’s ability to predict sales better than any one factor. The higher R-squared of the complex model suggests it is better suited to understand and predict the variance in sale prices. 
+
 The results of the linear regression analysis is that there is statistical evidence that the square footage of the living area of a house has a positive impact on the sale price of houses across the neighborhoods. There is also evidence that the price varies between neighborhoods. The baseline sale price (or intercept) of the model for BrkSide is $19,971. For each additional 100 sq.ft. , there is an associated increase in sale price of ~$8716. In the Edwards neighborhood, homes tend to start around $68,381 and are associated with a $2975 increase per 100 sq. ft. of living area. Within the N Ames neighborhood, home prices baseline at $54,704 and are associated with a ~$5432 increase in price per 100 sq.ft.. 
-	This model explains 44.74% of the variance in sale prices as indicated by the R^2 value. WIth an adjusted R^2 of 0.44, this indicates that the model is a good fit. The model provides evidence that as there is an increase in the sq.ft. of a house, there is an increase in the sale price of the house. It also provides evidence that the price differs significantly between neighborhoods.
-	Based on the model, the starting sale price for a home in the BrkSide neighborhood is $19,971.51, but with 95% confidence between $-4,314.21 to $44,257.24. In the Edwards neighborhood, starting sale prices are $68,381.59, but with 95% confidence between $40,913.67 to $95.849.51. For the NAmes neighborhood, sales begin at a baseline of $54,704.89, but with 95% confidence between $27,408.38 to $82,001.39. Each additional 100 square feet in living area is associated with an increase of $8716 with 95% confidence between $6793 to $10640.
-	The analysis suggests that both the living area and neighborhood significantly influence house prices in Ames, Iowa. The confidence intervals suggest a high degree of certainty about these effects. While there are differences between neighborhoods, these findings provide insights into the relationships between different variables and how they play into home sale prices. This information can be very valuable for real estate pricing strategies in Ames and we hope Century 21 considers our models. 
- 
+	
+ This model explains 44.74% of the variance in sale prices as indicated by the R^2 value. WIth an adjusted R^2 of 0.44, this indicates that the model is a good fit. The model provides evidence that as there is an increase in the sq.ft. of a house, there is an increase in the sale price of the house. It also provides evidence that the price differs significantly between neighborhoods.
+	
+ Based on the model, the starting sale price for a home in the BrkSide neighborhood is $19,971.51, but with 95% confidence between $-4,314.21 to $44,257.24. In the Edwards neighborhood, starting sale prices are $68,381.59, but with 95% confidence between $40,913.67 to $95.849.51. For the NAmes neighborhood, sales begin at a baseline of $54,704.89, but with 95% confidence between $27,408.38 to $82,001.39. Each additional 100 square feet in living area is associated with an increase of $8716 with 95% confidence between $6793 to $10640.
+	
+ The analysis suggests that both the living area and neighborhood significantly influence house prices in Ames, Iowa. The confidence intervals suggest a high degree of certainty about these effects. While there are differences between neighborhoods, these findings provide insights into the relationships between different variables and how they play into home sale prices. This information can be very valuable for real estate pricing strategies in Ames and we hope Century 21 considers our models. 
+
+ 
 ## RShiny: 
  At this link, you can find the RShiny app we have made that allows you to observe the linear relationship begtween GrLivArea and SalePrice for any neighborhood you choose, and you can enhance the scatterplot by adding a best fit line!
 https://amaxpagan.shinyapps.io/RShinyApp/ 
+
+
 ## Analysis 2:
 For Analysis 2, we were asked to find the most effective predictive model for home sales prices in Ames, Iowa, encompassing all neighborhoods using Linear regression. We will be comparing three linear regression models to do this: first, we will use a simple linear regression model. Next, we will use a provided multiple linear regression model. Then, we will employ a final multiple linear regression model of our own design.
-Linear Model 1
+
+###Linear Model 1
 The first linear model we were instructed to create was a simple linear regression with one predictor variable predicting our dependent variable of SalePrice. We decided to perform a log transformation on the year the home was built, YearBuilt, and use that transformation as the independent variable.
+
 The linear model equation can be expressed as:
+
 SalePrice=β_0+β_1×log(YearBuilt)
+
 where: - β_0 is the intercept term, and - β_1 is the coefficient for log(YearBuilt)
+
 β_1 was found to be 2685933.
+
 We can interpret this model by saying that a 1% increase in the year a house was built is associated with an average increase in sale price of $26,859.
+
 Observing the plots of figure 5, we can address the necessary assumptions of the linear model. One necessary assumption we must address for all models is the independence of each observation. Since each observed data point is its own property with a unique ID number, we know that this assumption will be met for this model and all models going forward. Next, we must address the appearance of a linear relationship between the two variables, which is sufficiently demonstrated in figure 13 in the appendix. The next assumption we will need to address is homoscedasticity. The Standardized Residuals vs Fitted values plot demonstrates a marginally acceptable level of homoscedasticity. We will have to proceed with caution if we continue to use this variable. The QQ plot of residuals demonstrates some degree of normality of the data, and the Residuals vs. leverage plot demonstrates some points with a higher Cook’s distance than others, however, the highest Cook’s Distance value being 0.08 means this is not particularly a concern. Overall, this model does a less-than-ideal job handling the necessary assumptions for simple linear regression, so we will proceed with caution.
+
 Linear Model 2
 For the second linear model, we used a provided outline for a multiple linear regression model. The linear model equation can be expressed as:
 SalePrice=β_0+β_1×GrLivArea+β_2×FullBath+
@@ -552,7 +576,7 @@ ggplot(train, aes(x = GrLivArea, y = SalePrice, color = LandContour)) +
   labs(title = "SalePrice vs GrLivArea by LandContour",
    	x = "GrLivArea",
    	y = "SalePrice")
- 
+ (assets/project_images/Ames_Housing_Prices/Figure1.png)
 Figure 5 - diagnostic graphs, SLR Analysis 2
  
 Figure 6 - diagnostic graphs, provided MLR Analysis 2
