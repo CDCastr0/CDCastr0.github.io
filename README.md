@@ -1,13 +1,12 @@
 # Data Scientist
 
 ### Education
-B.A. Religious Studies, Southern Methodist University 2023
+- B.A., Religious Studies | Southern Methodist University (_2023_)
 
-M.S. Data Science, Southern Methodist University (in-progress)
+-    M.S., Data Science   | Southern Methodist University (_in-progress_)
 
 ### Work Experience
-IT Help Desk Student Worker Team Lead @ SMU OIT
-- August 2019 - present
+**IT Help Desk Student Worker Team Lead @ SMU OIT (_August 2019 - Present_)**
 - became team lead in 2021
 
 ### Projects
