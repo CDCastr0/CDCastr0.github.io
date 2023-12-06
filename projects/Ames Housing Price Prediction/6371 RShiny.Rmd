@@ -1,0 +1,66 @@
+---
+title: "RShiny for project"
+author: "Christian Castro"
+date: "2023-11-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r training data}
+train <- read.csv("C:/Users/Christian/Downloads/RShiny App Ames Case Study/train.csv")
+```
+
+```{r shiny app}
+
+library(shiny)
+library(ggplot2)
+
+# Define UI
+ui <- fluidPage(
+  titlePanel("Scatterplot Selector by Neighborhood"),
+
+  sidebarLayout(
+    sidebarPanel(
+      # Dropdown for neighborhood selection
+      selectInput("neighborhood", "Select Neighborhood:", 
+                  choices = c("All", unique(train$Neighborhood)), selected = "All"),
+      
+      # Checkbox for best fit line
+      checkboxInput("fit_line", "Include Best Fit Line", value = FALSE)
+    ),
+
+    mainPanel(
+      # Plot output
+      plotOutput("scatterplot")
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output) {
+  # Create scatterplot
+  output$scatterplot <- renderPlot({
+    filtered_data <- switch(input$neighborhood,
+                            "All" = train,
+                            train[train$Neighborhood == input$neighborhood, ])
+    
+    plot <- ggplot(filtered_data, aes(x = GrLivArea, y = SalePrice)) +
+      geom_point() +
+      labs(title = paste("Scatterplot of SalePrice and GrLivArea by Neighborhood"),
+           x = "GrLivArea", y = "SalePrice")
+    
+    if (input$fit_line) {
+      plot <- plot + geom_smooth(method = "lm", se = FALSE, color = "blue")
+    }
+    
+    plot
+  })
+}
+
+# Run the app
+shinyApp(ui, server)
+
+```
