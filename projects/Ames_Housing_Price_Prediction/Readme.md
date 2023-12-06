@@ -100,469 +100,469 @@ Custom MLR Model	0.5707977	4.0913e+12	.28449
  Above is the final table comparing the three models. The CV Press values for the first and third values seem exceptionally high. However, seeing as the Adjusted R^2 continues to increase as we go down the list, and the Kaggle score continues to decrease, our final recommendation is to use the third model, our formulated multiple linear regression model, in order to predict sale price in Ames. All in all, each model is not without its flaws, and more time must be spent to determine a truly ideal model, however, by carefully observing relationships, we can demonstrate that our ability to predict the sale price will only increase.
  
 ## Appendix:
-<'''Max Pagan and Christian Castro
+'''Max Pagan and Christian Castro
 Analysis 1
 ChatGPT was utilized for specific functions, error solving, and commenting for documentation'''
-
-# dplyr for data manipulation
+ 
+#dplyr for data manipulation
 library(dplyr)
-# ggplot2 for data visualization
+#ggplot2 for data visualization
 library(ggplot2)
-# car for diagnostic plots
+#car for diagnostic plots
 library(car)
-# boot for cross validation
+#boot for cross validation
 library(boot)
-
-# Load the dataset
+ 
+#Load the dataset
 data <- read.csv(choose.files())
-
-# Focus on the three specified neighborhoods
+ 
+#Focus on the three specified neighborhoods
 filtered_data <- filter(data, Neighborhood %in% c("NAmes", "Edwards", "BrkSide"))
-
-# Check for missing data in predictors and the response variable
+ 
+#Check for missing data in predictors and the response variable
 sum(is.na(filtered_data$SalePrice))
 sum(is.na(filtered_data$GrLivArea))
 sum(is.na(filtered_data$Neighborhood))
 filtered_data <- filtered_data %>%
   drop_na(SalePrice, GrLivArea, Neighborhood)
-
-
-# Basic summary and structure
+ 
+  
+#Basic summary and structure
 summary(filtered_data)
 str(filtered_data)
-
-# Plotting SalePrice against GrLivArea
+ 
+#Plotting SalePrice against GrLivArea
 ggplot(filtered_data, aes(x = GrLivArea, y = SalePrice)) +
   geom_point() +
   facet_wrap(~ Neighborhood) +
   labs(title = "SalePrice vs GrLivArea in Selected Neighborhoods",
    	x = "Living Area (GrLivArea)", y = "Sale Price")
-
-# SalePrice vs GrLivArea by Neighborhood
+ 
+#SalePrice vs GrLivArea by Neighborhood
 ggplot(filtered_data, aes(x = GrLivArea, y = SalePrice, color = Neighborhood)) +
   geom_point() +
   labs(title = "SalePrice vs GrLivArea in Selected Neighborhoods",
    	x = "Living Area (GrLivArea)", y = "Sale Price") +
   theme_minimal()
-
-# Linear regression model with interaction between GrLivArea and Neighborhood
+ 
+#Linear regression model with interaction between GrLivArea and Neighborhood
 model <- lm(SalePrice ~ GrLivArea * Neighborhood, data = filtered_data)
-
-# Display the model summary
+ 
+#Display the model summary
 summary(model)
-
-# Plotting diagnostic plots for the linear regression model
+ 
+#Plotting diagnostic plots for the linear regression model
 par(mfrow = c(2, 2)) # Setting up the plotting area for multiple plots
 plot(model) # Base R diagnostic plots for linear models
-
-# Generating the influence plot
+ 
+#Generating the influence plot
 influencePlot(model, main = "Influence Plot")
-
-# Calculating Cook's distance
+ 
+#Calculating Cook's distance
 cooksD <- cooks.distance(model)
-
-# Plotting Cook's distance
+ 
+#Plotting Cook's distance
 plot(cooksD, type = "h", main = "Cook's Distance", ylab = "Cook's distance")
 abline(h = 4/(nrow(filtered_data)-length(coef(model))), col = "red")
-
-# Fit your model
+ 
+#Fit your model
 model <- lm(SalePrice ~ GrLivArea * Neighborhood, data = filtered_data)
-
-# Calculate Cook's distance for each observation
+ 
+#Calculate Cook's distance for each observation
 cooks_d <- cooks.distance(model)
-
-# Plot Cook's distance to identify potential outliers
+ 
+#Plot Cook's distance to identify potential outliers
 plot(cooks_d, type="h", main="Cook's Distance", ylab="Cook's distance")
 abline(h = 4 / length(cooks_d), col="red") # A common threshold is 4/n
-
-# Calculate standardized residuals
+ 
+#Calculate standardized residuals
 std_residuals <- rstandard(model)
-
-# Plot standardized residuals
+ 
+#Plot standardized residuals
 plot(std_residuals, type="h", main="Standardized Residuals")
 abline(h = c(-2, 2), col="red")
-
-
-# Assuming you've decided that observations with Cook's distance > 4/n are outliers
+ 
+ 
+#Assuming you've decided that observations with Cook's distance > 4/n are outliers
 threshold <- 4 / length(cooks_d)
 outliers <- which(cooks_d > threshold)
-
-# Remove outliers from the data
+ 
+#Remove outliers from the data
 filtered_data_clean <- filtered_data[-outliers, ]
-
-# Re-fit the model without outliers
+ 
+#Re-fit the model without outliers
 model_clean <- lm(SalePrice ~ GrLivArea * Neighborhood, data = filtered_data_clean)
-
-# Check the diagnostic plots for the new model
+ 
+#Check the diagnostic plots for the new model
 par(mfrow = c(2, 2))
 plot(model_clean)
-
-# Extracting and displaying model coefficients
+ 
+#Extracting and displaying model coefficients
 coefficients <- coef(model)
 conf_int <- confint(model)
-
-# Display the coefficients and confidence intervals
+ 
+#Display the coefficients and confidence intervals
 print(coefficients)
 print(conf_int)
-
-# Fit the simpler model without interactions
+ 
+#Fit the simpler model without interactions
 simple_model <- lm(SalePrice ~ GrLivArea + Neighborhood, data = filtered_data)
-
-# Fit the complex model with interactions (already done in your code)
+ 
+#Fit the complex model with interactions (already done in your code)
 complex_model <- model  # This is just for clarity, as you've already fitted this model
-
-# Get Adjusted R-squared values
+ 
+#Get Adjusted R-squared values
 adj_r2_simple <- summary(simple_model)$adj.r.squared
 adj_r2_complex <- summary(complex_model)$adj.r.squared
-
-# Display Adjusted R-squared values
+ 
+#Display Adjusted R-squared values
 print(paste("Adjusted R-squared for simple model:", adj_r2_simple))
 print(paste("Adjusted R-squared for complex model:", adj_r2_complex))
-
+ 
 calc_cv_press <- function(model, data, folds = 10) {
-  # Perform K-fold cross-validation and calculate PRESS
+  #Perform K-fold cross-validation and calculate PRESS
   cv_results <- cv.glm(data, model, K = folds)
-  # cv.glm() returns NaN if there's an issue in prediction; handle this case
+  #cv.glm() returns NaN if there's an issue in prediction; handle this case
   if (any(is.nan(cv_results$delta))) {
-	# Calculate PRESS manually if cv.glm() fails
+	#Calculate PRESS manually if cv.glm() fails
 	press <- sum((residuals(model) / (1 - hatvalues(model)))^2)
   } else {
 	press <- sum(cv_results$delta)
   }
   return(press)
 }
-
-# Recalculate CV PRESS for each model
+ 
+#Recalculate CV PRESS for each model
 cv_press_simple <- calc_cv_press(simple_model, filtered_data)
 cv_press_complex <- calc_cv_press(complex_model, filtered_data)
-
-# Display CV PRESS values again
+ 
+#Display CV PRESS values again
 print(paste("CV PRESS for simple model:", cv_press_simple))
 print(paste("CV PRESS for complex model:", cv_press_complex))
-
-
  
+ 
+  
 Figure 1 - plotting the data
- 
+  
 Figure 2 - splitting data by neighborhood 
-    
+     
 Figure 3 - diagnostic graphs
- 
+  
 Figure 4 - diagnostic graphs, post outlier handling
-
+ 
 train <- read.csv("~/Downloads/train.csv")
 test <- read.csv("~/Downloads/test.csv")
 library(ggplot2)
-
-# Convert LandContour and LandSlope to factors
+ 
+#Convert LandContour and LandSlope to factors
 train$LandContour <- as.factor(train$LandContour)
 train$LandSlope <- as.factor(train$LandSlope)
-# Set reference levels for LandContour and LandSlope
+#Set reference levels for LandContour and LandSlope
 train$LandContour <- relevel(train$LandContour, ref = "Lvl")
 train$LandSlope <- relevel(train$LandSlope, ref = "Gtl")
 #creating the simple linear model SalePrice vs Log(YearBuilt)
 linear <- lm(SalePrice ~ log(YearBuilt), data = train)
 linear
 ##
-## Call:
-## lm(formula = SalePrice ~ log(YearBuilt), data = train)
+##Call:
+##lm(formula = SalePrice ~ log(YearBuilt), data = train)
 ##
-## Coefficients:
-##	(Intercept)  log(YearBuilt) 
-##  	-20195411     	2685933
+##Coefficients:
+##(Intercept)  log(YearBuilt) 
+##-20195411     	2685933
 summary(linear)
 ##
-## Call:
-## lm(formula = SalePrice ~ log(YearBuilt), data = train)
+##Call:
+##lm(formula = SalePrice ~ log(YearBuilt), data = train)
 ##
-## Residuals:
-## 	Min  	1Q  Median  	3Q 	Max
-## -143650  -40966  -15605   22501  542965
+##Residuals:
+##Min  	1Q  Median  	3Q 	Max
+##-143650  -40966  -15605   22501  542965
 ##
-## Coefficients:
-##             	Estimate Std. Error t value Pr(>|t|)   
-## (Intercept)	-20195411 	875247  -23.07   <2e-16 ***
-## log(YearBuilt)   2685933 	115372   23.28   <2e-16 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+##Coefficients:
+##Estimate Std. Error t value Pr(>|t|)   
+##(Intercept)	-20195411 	875247  -23.07   <2e-16 ***
+##log(YearBuilt)   2685933 	115372   23.28   <2e-16 ***
+##---
+##Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ##
-## Residual standard error: 67850 on 1458 degrees of freedom
-## Multiple R-squared:  0.271,  Adjusted R-squared:  0.2705
-## F-statistic:   542 on 1 and 1458 DF,  p-value: < 2.2e-16
+##Residual standard error: 67850 on 1458 degrees of freedom
+##Multiple R-squared:  0.271,  Adjusted R-squared:  0.2705
+##F-statistic:   542 on 1 and 1458 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(linear)
 #creating the given multiple regression model
 given_model <- lm(SalePrice~GrLivArea + FullBath, data = train)
 given_model
 ##
-## Call:
-## lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
+##Call:
+##lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
 ##
-## Coefficients:
-## (Intercept)	GrLivArea 	FullBath 
-## 	3162.99    	89.09 	27311.09
+##Coefficients:
+##(Intercept)	GrLivArea 	FullBath 
+##3162.99    	89.09 	27311.09
 summary(given_model)
 ##
-## Call:
-## lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
+##Call:
+##lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
 ##
-## Residuals:
-## 	Min  	1Q  Median  	3Q 	Max
-## -400438  -26191   -2027   21488  343260
+##Residuals:
+##Min  	1Q  Median  	3Q 	Max
+##-400438  -26191   -2027   21488  343260
 ##
-## Coefficients:
-##          	Estimate Std. Error t value Pr(>|t|)   
-## (Intercept)  3162.993   4775.342   0.662	0.508   
-## GrLivArea  	89.091  	3.519  25.314  < 2e-16 ***
-## FullBath	27311.090   3357.001   8.136  8.7e-16 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+##Coefficients:
+##Estimate Std. Error t value Pr(>|t|)   
+##(Intercept)  3162.993   4775.342   0.662	0.508   
+##GrLivArea  	89.091  	3.519  25.314  < 2e-16 ***
+##FullBath	27311.090   3357.001   8.136  8.7e-16 ***
+##---
+##Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ##
-## Residual standard error: 54860 on 1457 degrees of freedom
-## Multiple R-squared:  0.5238, Adjusted R-squared:  0.5231
-## F-statistic: 801.3 on 2 and 1457 DF,  p-value: < 2.2e-16
+##Residual standard error: 54860 on 1457 degrees of freedom
+##Multiple R-squared:  0.5238, Adjusted R-squared:  0.5231
+##F-statistic: 801.3 on 2 and 1457 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(given_model)
 #creating the first attempt of my model - GrLivArea, LotArea, LandContour, and LandSlope
 my_model <- lm(SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope*GrLivArea + LandSlope*LotArea + LandContour + LandContour*GrLivArea + LandContour*LotArea + LandSlope*LandContour, data = train)
 my_model
 ##
-## Call:
-## lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
-## 	GrLivArea + LandSlope * LotArea + LandContour + LandContour *
-## 	GrLivArea + LandContour * LotArea + LandSlope * LandContour,
-## 	data = train)
+##Call:
+##lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
+##GrLivArea + LandSlope * LotArea + LandContour + LandContour *
+##GrLivArea + LandContour * LotArea + LandSlope * LandContour,
+##data = train)
 ##
-## Coefficients:
-##             	(Intercept)                	GrLivArea 
-##              	-5.798e+03                	1.076e+02 
-##                 	LotArea             	LandSlopeMod 
-##               	2.514e+00               	-3.539e+04 
-##            	LandSlopeSev           	LandContourBnk 
-##               	4.192e+04                	1.003e+05 
-##          	LandContourHLS           	LandContourLow 
-##               	1.907e+04               	-3.524e+03 
-##  	GrLivArea:LandSlopeMod   	GrLivArea:LandSlopeSev 
-##               	3.285e+01               	-3.920e+01 
-##    	LotArea:LandSlopeMod     	LotArea:LandSlopeSev 
-##              	-2.766e+00               	-2.707e+00 
-##	GrLivArea:LandContourBnk 	GrLivArea:LandContourHLS 
-##              	-7.794e+01                	8.817e+00 
-##	GrLivArea:LandContourLow   	LotArea:LandContourBnk 
-##              	-2.587e+01               	-2.593e+00 
-##  	LotArea:LandContourHLS   	LotArea:LandContourLow 
-##               	9.315e-01                	1.045e+00 
-## LandSlopeMod:LandContourBnk  LandSlopeSev:LandContourBnk 
-##               	1.372e+04                	1.990e+05 
-## LandSlopeMod:LandContourHLS  LandSlopeSev:LandContourHLS 
-##              	-1.336e+04               	-8.760e+04 
-## LandSlopeMod:LandContourLow  LandSlopeSev:LandContourLow 
-##               	6.053e+04                	6.398e+04
+##Coefficients:
+##(Intercept)                	GrLivArea 
+##-5.798e+03                	1.076e+02 
+##LotArea             	LandSlopeMod 
+##2.514e+00               	-3.539e+04 
+##LandSlopeSev           	LandContourBnk 
+##4.192e+04                	1.003e+05 
+##LandContourHLS           	LandContourLow 
+##1.907e+04               	-3.524e+03 
+##GrLivArea:LandSlopeMod   	GrLivArea:LandSlopeSev 
+##3.285e+01               	-3.920e+01 
+##LotArea:LandSlopeMod     	LotArea:LandSlopeSev 
+##-2.766e+00               	-2.707e+00 
+##GrLivArea:LandContourBnk 	GrLivArea:LandContourHLS 
+##-7.794e+01                	8.817e+00 
+##GrLivArea:LandContourLow   	LotArea:LandContourBnk 
+##-2.587e+01               	-2.593e+00 
+##LotArea:LandContourHLS   	LotArea:LandContourLow 
+##9.315e-01                	1.045e+00 
+##LandSlopeMod:LandContourBnk  LandSlopeSev:LandContourBnk 
+##1.372e+04                	1.990e+05 
+##LandSlopeMod:LandContourHLS  LandSlopeSev:LandContourHLS 
+##-1.336e+04               	-8.760e+04 
+##LandSlopeMod:LandContourLow  LandSlopeSev:LandContourLow 
+##6.053e+04                	6.398e+04
 summary(my_model)
 ##
-## Call:
-## lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
-## 	GrLivArea + LandSlope * LotArea + LandContour + LandContour *
-## 	GrLivArea + LandContour * LotArea + LandSlope * LandContour,
-## 	data = train)
+##Call:
+##lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
+##GrLivArea + LandSlope * LotArea + LandContour + LandContour *
+##GrLivArea + LandContour * LotArea + LandSlope * LandContour,
+##data = train)
 ##
-## Residuals:
-## 	Min  	1Q  Median  	3Q 	Max
-## -189872  -28064	-225   22270  330592
+##Residuals:
+##Min  	1Q  Median  	3Q 	Max
+##-189872  -28064	-225   22270  330592
 ##
-## Coefficients:
-##                           	Estimate Std. Error t value Pr(>|t|)   
-## (Intercept)             	-5.798e+03  4.829e+03  -1.201  0.23012   
-## GrLivArea                	1.076e+02  3.164e+00  34.007  < 2e-16 ***
-## LotArea                  	2.514e+00  3.929e-01   6.400 2.10e-10 ***
-## LandSlopeMod            	-3.539e+04  2.776e+04  -1.275  0.20260   
-## LandSlopeSev             	4.192e+04  7.837e+04   0.535  0.59281   
-## LandContourBnk           	1.003e+05  1.597e+04   6.278 4.54e-10 ***
-## LandContourHLS           	1.907e+04  2.734e+04   0.697  0.48564   
-## LandContourLow          	-3.524e+03  3.904e+04  -0.090  0.92809    
-## GrLivArea:LandSlopeMod   	3.285e+01  1.378e+01   2.384  0.01728 * 
-## GrLivArea:LandSlopeSev  	-3.920e+01  5.582e+01  -0.702  0.48262   
-## LotArea:LandSlopeMod    	-2.766e+00  1.059e+00  -2.611  0.00912 **
-## LotArea:LandSlopeSev    	-2.707e+00  1.041e+00  -2.600  0.00942 **
-## GrLivArea:LandContourBnk	-7.794e+01  1.139e+01  -6.841 1.16e-11 ***
-## GrLivArea:LandContourHLS 	8.817e+00  1.671e+01   0.528  0.59777   
-## GrLivArea:LandContourLow	-2.587e+01  2.342e+01  -1.105  0.26951   
-## LotArea:LandContourBnk  	-2.593e+00  1.016e+00  -2.552  0.01080 * 
-## LotArea:LandContourHLS   	9.315e-01  1.117e+00   0.834  0.40430   
-## LotArea:LandContourLow   	1.046e+00  1.054e+00   0.992  0.32153   
-## LandSlopeMod:LandContourBnk  1.372e+04  2.086e+04   0.658  0.51076   
-## LandSlopeSev:LandContourBnk  1.990e+05  1.020e+05   1.952  0.05116 . 
-## LandSlopeMod:LandContourHLS -1.336e+04  2.074e+04  -0.644  0.51965   
-## LandSlopeSev:LandContourHLS -8.760e+04  8.851e+04  -0.990  0.32246   
-## LandSlopeMod:LandContourLow  6.053e+04  2.638e+04   2.295  0.02190 * 
-## LandSlopeSev:LandContourLow  6.398e+04  6.228e+04   1.027  0.30450   
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+##Coefficients:
+##Estimate Std. Error t value Pr(>|t|)   
+##(Intercept)             	-5.798e+03  4.829e+03  -1.201  0.23012   
+##GrLivArea                	1.076e+02  3.164e+00  34.007  < 2e-16 ***
+##LotArea                  	2.514e+00  3.929e-01   6.400 2.10e-10 ***
+##LandSlopeMod            	-3.539e+04  2.776e+04  -1.275  0.20260   
+##LandSlopeSev             	4.192e+04  7.837e+04   0.535  0.59281   
+##LandContourBnk           	1.003e+05  1.597e+04   6.278 4.54e-10 ***
+##LandContourHLS           	1.907e+04  2.734e+04   0.697  0.48564   
+##LandContourLow          	-3.524e+03  3.904e+04  -0.090  0.92809    
+##GrLivArea:LandSlopeMod   	3.285e+01  1.378e+01   2.384  0.01728 * 
+##GrLivArea:LandSlopeSev  	-3.920e+01  5.582e+01  -0.702  0.48262   
+##LotArea:LandSlopeMod    	-2.766e+00  1.059e+00  -2.611  0.00912 **
+##LotArea:LandSlopeSev    	-2.707e+00  1.041e+00  -2.600  0.00942 **
+##GrLivArea:LandContourBnk	-7.794e+01  1.139e+01  -6.841 1.16e-11 ***
+##GrLivArea:LandContourHLS 	8.817e+00  1.671e+01   0.528  0.59777   
+##GrLivArea:LandContourLow	-2.587e+01  2.342e+01  -1.105  0.26951   
+##LotArea:LandContourBnk  	-2.593e+00  1.016e+00  -2.552  0.01080 * 
+##LotArea:LandContourHLS   	9.315e-01  1.117e+00   0.834  0.40430   
+##LotArea:LandContourLow   	1.046e+00  1.054e+00   0.992  0.32153   
+##LandSlopeMod:LandContourBnk  1.372e+04  2.086e+04   0.658  0.51076   
+##LandSlopeSev:LandContourBnk  1.990e+05  1.020e+05   1.952  0.05116 . 
+##LandSlopeMod:LandContourHLS -1.336e+04  2.074e+04  -0.644  0.51965   
+##LandSlopeSev:LandContourHLS -8.760e+04  8.851e+04  -0.990  0.32246   
+##LandSlopeMod:LandContourLow  6.053e+04  2.638e+04   2.295  0.02190 * 
+##LandSlopeSev:LandContourLow  6.398e+04  6.228e+04   1.027  0.30450   
+##---
+##Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ##
-## Residual standard error: 51560 on 1436 degrees of freedom
-## Multiple R-squared:  0.5854, Adjusted R-squared:  0.5788
-## F-statistic: 88.16 on 23 and 1436 DF,  p-value: < 2.2e-16
+##Residual standard error: 51560 on 1436 degrees of freedom
+##Multiple R-squared:  0.5854, Adjusted R-squared:  0.5788
+##F-statistic: 88.16 on 23 and 1436 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(my_model)
-## Warning: not plotting observations with leverage one:
-##   694, 1397
+##Warning: not plotting observations with leverage one:
+##694, 1397
 #editing my model down to only the significalnt variables
-# Create the 'Banked' column
+#Create the 'Banked' column
 train$Banked <- ifelse(train$LandContour == "Bnk", 1, 0)
 
-# Create the 'Low' column
+#Create the 'Low' column
 train$Low <- ifelse(train$LandContour == "Low", 1, 0)
 
-# Create the 'Moderate' column
+#Create the 'Moderate' column
 train$Moderate <- ifelse(train$LandSlope == "Mod", 1, 0)
 
 
 my_model_2 <- lm(SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data =train)
 my_model_2
 ##
-## Call:
-## lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
-## 	LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
+##Call:
+##lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
+##LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
 ##
-## Coefficients:
-##      	(Intercept)         	GrLivArea           	LotArea 
-##        	-5559.854           	108.463             	2.440 
-##           	Banked	GrLivArea:Moderate  LotArea:LandSlopeMod 
-##        	97961.266            	16.388            	-1.652 
-## LotArea:LandSlopeSev  	GrLivArea:Banked    	LotArea:Banked 
-##           	-1.826           	-84.619            	-1.519
+##Coefficients:
+##(Intercept)         	GrLivArea           	LotArea 
+##-5559.854           	108.463             	2.440 
+##Banked	GrLivArea:Moderate  LotArea:LandSlopeMod 
+##97961.266            	16.388            	-1.652 
+##LotArea:LandSlopeSev  	GrLivArea:Banked    	LotArea:Banked 
+##-1.826           	-84.619            	-1.519
 summary(my_model_2)
 ##
-## Call:
-## lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
-## 	LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
+##Call:
+##lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
+##LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
 ##
-## Residuals:
-## 	Min  	1Q  Median  	3Q 	Max
-## -191108  -28826	-816   22212  329282
-##
-## Coefficients:
-##                    	Estimate Std. Error t value Pr(>|t|)   
-## (Intercept)      	-5559.8544  4653.0269  -1.195  0.23233   
-## GrLivArea          	108.4633 	3.0820  35.193  < 2e-16 ***
-## LotArea	              2.4404 	0.3550   6.875 9.18e-12 ***
-## Banked           	97961.2656 14967.0199   6.545 8.22e-11 ***
-## GrLivArea:Moderate  	16.3881 	6.2064   2.641  0.00837 **
-## LotArea:LandSlopeMod	-1.6517 	0.6107  -2.705  0.00692 **
-## LotArea:LandSlopeSev	-1.8262 	0.3564  -5.125 3.38e-07 ***
-## GrLivArea:Banked   	-84.6189	10.0158  -8.449  < 2e-16 ***
-## LotArea:Banked      	-1.5189 	0.7526  -2.018  0.04375 * 
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-##
-## Residual standard error: 52050 on 1451 degrees of freedom
-## Multiple R-squared:  0.5732, Adjusted R-squared:  0.5708
-## F-statistic: 243.5 on 8 and 1451 DF,  p-value: < 2.2e-16
+##Residuals:
+##Min  	1Q  Median  	3Q 	Max
+##-191108  -28826	-816   22212  329282
+#
+#Coefficients:
+#Estimate Std. Error t value Pr(>|t|)   
+#(Intercept)      	-5559.8544  4653.0269  -1.195  0.23233   
+#GrLivArea          	108.4633 	3.0820  35.193  < 2e-16 ***
+#LotArea	              2.4404 	0.3550   6.875 9.18e-12 ***
+#Banked           	97961.2656 14967.0199   6.545 8.22e-11 ***
+#GrLivArea:Moderate  	16.3881 	6.2064   2.641  0.00837 **
+#LotArea:LandSlopeMod	-1.6517 	0.6107  -2.705  0.00692 **
+#LotArea:LandSlopeSev	-1.8262 	0.3564  -5.125 3.38e-07 ***
+#GrLivArea:Banked   	-84.6189	10.0158  -8.449  < 2e-16 ***
+#LotArea:Banked      	-1.5189 	0.7526  -2.018  0.04375 * 
+#---
+#Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#
+#Residual standard error: 52050 on 1451 degrees of freedom
+#Multiple R-squared:  0.5732, Adjusted R-squared:  0.5708
+#F-statistic: 243.5 on 8 and 1451 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(my_model_2)
-# Print Adjusted R^2
+#Print Adjusted R^2
 adjusted_r2_1 <- summary(linear)$adj.r.squared
 cat("Adjusted R^2: SLR model - ", adjusted_r2_1, "\n")
-## Adjusted R^2: SLR model -  0.2704971
+#Adjusted R^2: SLR model -  0.2704971
 adjusted_r2_2 <- summary(given_model)$adj.r.squared
 cat("Adjusted R^2: provided Multiple Regression model - ", adjusted_r2_2, "\n")
-## Adjusted R^2: provided Multiple Regression model -  0.5231282
+#Adjusted R^2: provided Multiple Regression model -  0.5231282
 adjusted_r2_3 <- summary(my_model_2)$adj.r.squared
 cat("Adjusted R^2: My multiple regression model - ", adjusted_r2_3, "\n")
-## Adjusted R^2: My multiple regression model -  0.5707977
+#Adjusted R^2: My multiple regression model -  0.5707977
 #importing the CV press values from SAS:
-# Internal CV Press
+#Internal CV Press
 cv_press1 <- 153.89090
 cat("Internal CV PRESS - SLR:", cv_press1, "\n")
-## Internal CV PRESS - SLR: 153.8909
+#Internal CV PRESS - SLR: 153.8909
 cv_press2 <- 4.425785e12
 cat("Internal CV PRESS - provided multiple model:", cv_press2, "\n")
-## Internal CV PRESS - provided multiple model: 4.425785e+12
+#Internal CV PRESS - provided multiple model: 4.425785e+12
 cv_press3 <-	4.091315e12
 cat("Internal CV PRESS - our model:", cv_press3, "\n")
-## Internal CV PRESS - our model: 4.091315e+12
+#Internal CV PRESS - our model: 4.091315e+12
 #In this code we are predicting SalePrice for test and creating a dataframe for it:
-
+  
 #First, we will use the SLR
-# 1. Create an empty column in test called SalePrice (and any other necessary columns)
+#1. Create an empty column in test called SalePrice (and any other necessary columns)
 test$SalePrice <- NA
-
-# 2. Populate the SalePrice column with the predicted values from the model
+ 
+#2. Populate the SalePrice column with the predicted values from the model
 test$SalePrice <- predict(linear, newdata = test)
-
-# 3. Output a new dataframe with SalePrice and Id
+ 
+#3. Output a new dataframe with SalePrice and Id
 output_SLR <- data.frame(Id = test$Id, SalePrice = test$SalePrice)
-
+  
 #Next, we will use the given MLR
-# 1. Create an empty column in test called SalePrice (and any other necessary columns)
+#1. Create an empty column in test called SalePrice (and any other necessary columns)
 test$SalePrice <- NA
-
-# 2. Populate the SalePrice column with the predicted values from the model
+ 
+#2. Populate the SalePrice column with the predicted values from the model
 test$SalePrice <- predict(given_model, newdata = test)
-
-# 3. Output a new dataframe with SalePrice and Id
+ 
+#3. Output a new dataframe with SalePrice and Id
 output_given <- data.frame(Id = test$Id, SalePrice = test$SalePrice)
-
+ 
 #Finally, the model we came up with
-# 1. Create an empty column in test called SalePrice (and any other necessary columns)
+#1. Create an empty column in test called SalePrice (and any other necessary columns)
 test$SalePrice <- NA
-# Create the 'Banked' column
+#Create the 'Banked' column
 test$Banked <- ifelse(test$LandContour == "Bnk", 1, 0)
-
-# Create the 'Low' column
+ 
+#Create the 'Low' column
 test$Low <- ifelse(test$LandContour == "Low", 1, 0)
-
-# Create the 'Moderate' column
+ 
+#Create the 'Moderate' column
 test$Moderate <- ifelse(test$LandSlope == "Mod", 1, 0)
-
-# 2. Populate the SalePrice column with the predicted values from the model
+ 
+#2. Populate the SalePrice column with the predicted values from the model
 test$SalePrice <- predict(my_model_2, newdata = test)
-
-# 3. Output a new dataframe with SalePrice and Id
+ 
+#3. Output a new dataframe with SalePrice and Id
 output_my_model<- data.frame(Id = test$Id, SalePrice = test$SalePrice)
-
+ 
 #outputting the data:
 write.csv(output_SLR, file = "predicted_saleprice_SLR.csv", row.names = FALSE)
 write.csv(output_given, file = "predicted_saleprice_given.csv", row.names = FALSE)
 write.csv(output_my_model, file = "predicted_saleprice_our_model.csv", row.names = FALSE)
 Kaggle_SLR <- 0.33906
 cat("Kaggle Score - SLR:", Kaggle_SLR, "\n")
-## Kaggle Score - SLR: 0.33906
+#Kaggle Score - SLR: 0.33906
 Kaggle_given <- 0.28586
 cat("Kaggle Score - given multiple regression:", Kaggle_SLR, "\n")
-## Kaggle Score - given multiple regression: 0.33906
+#Kaggle Score - given multiple regression: 0.33906
 Kaggle_ours <- 0.28449
 cat("Kaggle Score - our model:", Kaggle_SLR, "\n")
-## Kaggle Score - our model: 0.33906
-# Install and load necessary packages
+#Kaggle Score - our model: 0.33906
+#Install and load necessary packages
 #install.packages("knitr")
 #install.packages("kableExtra")
 #library(knitr)
 #library(kableExtra)
-
-# Assuming you have the necessary numbers in variables
+ 
+#Assuming you have the necessary numbers in variables
 #model_names <- c("Simple Linear Regression", "Multiple Linear Regression", "Our MLR Model")
 #adjusted_r2 <- c(adjusted_r2_1, adjusted_r2_2, adjusted_r2_3)
 #cv_press <- c(cv_press1, cv_press2, cv_press3)
 #kaggle_score <- c(Kaggle_SLR, Kaggle_given, Kaggle_ours)
-
-# Create a data frame
+ 
+#Create a data frame
 #results_df <- data.frame(Model = model_names, `Adjusted R2` = adjusted_r2, `CV PRESS` = cv_press, `Kaggle Score` = kaggle_score)
-
-# Print the table
+ 
+#Print the table
 #kable(results_df, format = "html") %>%
-#  kable_styling()
+#kable_styling()
 train <- read.csv("~/Downloads/train.csv")
 test <- read.csv("~/Downloads/test.csv")
 library(ggplot2)
-
-# Convert LandContour and LandSlope to factors
+ 
+#Convert LandContour and LandSlope to factors
 train$LandContour <- as.factor(train$LandContour)
 train$LandSlope <- as.factor(train$LandSlope)
-# Set reference levels for LandContour and LandSlope
+#Set reference levels for LandContour and LandSlope
 train$LandContour <- relevel(train$LandContour, ref = "Lvl")
 train$LandSlope <- relevel(train$LandSlope, ref = "Gtl")
-
+ 
 ggplot(train, aes(x = LotArea, y = SalePrice, color = LandSlope)) +
   geom_point() +
   labs(title = "SalePrice vs lotArea by LandSlope",
@@ -607,42 +607,42 @@ SAS CODE to find CV PRESS
 proc import datafile='/home/u63115740/train.csv' out=train dbms=csv replace;
   getnames=yes;
 run;
-
+ 
 data train;
   set train;
-
+ 
   /* Add log(SalePrice) column */
   log_SalePrice = log(SalePrice);
-
+ 
   /* Add log(YearBuilt) column */
   log_YearBuilt = log(YearBuilt);
 run;
-
+ 
 proc glmselect data=train;
    model SalePrice = log_YearBuilt / selection=Forward(stop=CV) cvmethod = random(5) stats = adjrsq;
 run;
-
+ 
 proc glmselect data=train;
    class FullBath; /* If FullBath is a categorical variable, specify it as a class variable */
    model SalePrice = GrLivArea FullBath / selection=Forward(stop=CV) cvmethod = random(5) stats = adjrsq;
 run;
-
+ 
 data train;
   set train;
-
+ 
   /* Create the 'Banked' column */
   Banked = ifn(LandContour = "Bnk", 1, 0);
-
+ 
   /* Create the 'Low' column */
   Low = ifn(LandContour = "Low", 1, 0);
-
+ 
   /* Create the 'Moderate' column */
   Moderate = ifn(LandSlope = "Mod", 1, 0);
 run;
-
+ 
 proc glmselect data=train;
 class LandSlope;
 class LandContour;
    model SalePrice = GrLivArea LotArea Banked GrLivArea*Moderate
                     LotArea*LandSlope GrLivArea*Banked LotArea*Banked / selection=Forward(stop=CV) cvmethod = random(5) stats = adjrsq;
-run;>
+run;
