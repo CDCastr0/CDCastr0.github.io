@@ -266,149 +266,144 @@ train$LandSlope <- relevel(train$LandSlope, ref = "Gtl")
 #creating the simple linear model SalePrice vs Log(YearBuilt)
 linear <- lm(SalePrice ~ log(YearBuilt), data = train)
 linear
-##
 ##Call:
 ##lm(formula = SalePrice ~ log(YearBuilt), data = train)
-##
-##Coefficients:
-##(Intercept)  log(YearBuilt) 
-##-20195411     	2685933
+#Coefficients:
+#(Intercept)  log(YearBuilt) 
+#-20195411     	2685933
 summary(linear)
-##
-##Call:
-##lm(formula = SalePrice ~ log(YearBuilt), data = train)
-##
-##Residuals:
-##Min  	1Q  Median  	3Q 	Max
-##-143650  -40966  -15605   22501  542965
-##
-##Coefficients:
-##Estimate Std. Error t value Pr(>|t|)   
-##(Intercept)	-20195411 	875247  -23.07   <2e-16 ***
-##log(YearBuilt)   2685933 	115372   23.28   <2e-16 ***
-##---
-##Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-##
-##Residual standard error: 67850 on 1458 degrees of freedom
-##Multiple R-squared:  0.271,  Adjusted R-squared:  0.2705
-##F-statistic:   542 on 1 and 1458 DF,  p-value: < 2.2e-16
+#Call:
+#lm(formula = SalePrice ~ log(YearBuilt), data = train)
+#Residuals:
+#Min  	1Q  Median  	3Q 	Max
+#-143650  -40966  -15605   22501  542965
+#Coefficients:
+#Estimate Std. Error t value Pr(>|t|)   
+#(Intercept)	-20195411 	875247  -23.07   <2e-16 ***
+#log(YearBuilt)   2685933 	115372   23.28   <2e-16 ***
+#---
+#Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+#Residual standard error: 67850 on 1458 degrees of freedom
+#Multiple R-squared:  0.271,  Adjusted R-squared:  0.2705
+#F-statistic:   542 on 1 and 1458 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(linear)
 #creating the given multiple regression model
 given_model <- lm(SalePrice~GrLivArea + FullBath, data = train)
 given_model
-##
-##Call:
-##lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
-##
-##Coefficients:
-##(Intercept)	GrLivArea 	FullBath 
-##3162.99    	89.09 	27311.09
+#
+#Call:
+#lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
+
+#Coefficients:
+#(Intercept)	GrLivArea 	FullBath 
+#3162.99    	89.09 	27311.09
 summary(given_model)
-##
-##Call:
-##lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
-##
-##Residuals:
-##Min  	1Q  Median  	3Q 	Max
-##-400438  -26191   -2027   21488  343260
-##
-##Coefficients:
-##Estimate Std. Error t value Pr(>|t|)   
-##(Intercept)  3162.993   4775.342   0.662	0.508   
-##GrLivArea  	89.091  	3.519  25.314  < 2e-16 ***
-##FullBath	27311.090   3357.001   8.136  8.7e-16 ***
-##---
-##Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-##
-##Residual standard error: 54860 on 1457 degrees of freedom
-##Multiple R-squared:  0.5238, Adjusted R-squared:  0.5231
-##F-statistic: 801.3 on 2 and 1457 DF,  p-value: < 2.2e-16
+
+#Call:
+#lm(formula = SalePrice ~ GrLivArea + FullBath, data = train)
+
+#Residuals:
+#Min  	1Q  Median  	3Q 	Max
+#-400438  -26191   -2027   21488  343260
+
+#Coefficients:
+#Estimate Std. Error t value Pr(>|t|)   
+#(Intercept)  3162.993   4775.342   0.662	0.508   
+#GrLivArea  	89.091  	3.519  25.314  < 2e-16 ***
+#FullBath	27311.090   3357.001   8.136  8.7e-16 ***
+#---
+#Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#
+#Residual standard error: 54860 on 1457 degrees of freedom
+#Multiple R-squared:  0.5238, Adjusted R-squared:  0.5231
+#F-statistic: 801.3 on 2 and 1457 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(given_model)
 #creating the first attempt of my model - GrLivArea, LotArea, LandContour, and LandSlope
 my_model <- lm(SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope*GrLivArea + LandSlope*LotArea + LandContour + LandContour*GrLivArea + LandContour*LotArea + LandSlope*LandContour, data = train)
 my_model
-##
-##Call:
-##lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
-##GrLivArea + LandSlope * LotArea + LandContour + LandContour *
-##GrLivArea + LandContour * LotArea + LandSlope * LandContour,
-##data = train)
-##
-##Coefficients:
-##(Intercept)                	GrLivArea 
-##-5.798e+03                	1.076e+02 
-##LotArea             	LandSlopeMod 
-##2.514e+00               	-3.539e+04 
-##LandSlopeSev           	LandContourBnk 
-##4.192e+04                	1.003e+05 
-##LandContourHLS           	LandContourLow 
-##1.907e+04               	-3.524e+03 
-##GrLivArea:LandSlopeMod   	GrLivArea:LandSlopeSev 
-##3.285e+01               	-3.920e+01 
-##LotArea:LandSlopeMod     	LotArea:LandSlopeSev 
-##-2.766e+00               	-2.707e+00 
-##GrLivArea:LandContourBnk 	GrLivArea:LandContourHLS 
-##-7.794e+01                	8.817e+00 
-##GrLivArea:LandContourLow   	LotArea:LandContourBnk 
-##-2.587e+01               	-2.593e+00 
-##LotArea:LandContourHLS   	LotArea:LandContourLow 
-##9.315e-01                	1.045e+00 
-##LandSlopeMod:LandContourBnk  LandSlopeSev:LandContourBnk 
-##1.372e+04                	1.990e+05 
-##LandSlopeMod:LandContourHLS  LandSlopeSev:LandContourHLS 
-##-1.336e+04               	-8.760e+04 
-##LandSlopeMod:LandContourLow  LandSlopeSev:LandContourLow 
-##6.053e+04                	6.398e+04
+
+#Call:
+#lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
+#GrLivArea + LandSlope * LotArea + LandContour + LandContour *
+#GrLivArea + LandContour * LotArea + LandSlope * LandContour,
+#data = train)
+
+#Coefficients:
+#(Intercept)                	GrLivArea 
+#-5.798e+03                	1.076e+02 
+#LotArea             	LandSlopeMod 
+#2.514e+00               	-3.539e+04 
+#LandSlopeSev           	LandContourBnk 
+#4.192e+04                	1.003e+05 
+#LandContourHLS           	LandContourLow 
+#1.907e+04               	-3.524e+03 
+#GrLivArea:LandSlopeMod   	GrLivArea:LandSlopeSev 
+#3.285e+01               	-3.920e+01 
+#LotArea:LandSlopeMod     	LotArea:LandSlopeSev 
+#-2.766e+00               	-2.707e+00 
+#GrLivArea:LandContourBnk 	GrLivArea:LandContourHLS 
+#-7.794e+01                	8.817e+00 
+#GrLivArea:LandContourLow   	LotArea:LandContourBnk 
+#-2.587e+01               	-2.593e+00 
+#LotArea:LandContourHLS   	LotArea:LandContourLow 
+#9.315e-01                	1.045e+00 
+#LandSlopeMod:LandContourBnk  LandSlopeSev:LandContourBnk 
+#1.372e+04                	1.990e+05 
+#LandSlopeMod:LandContourHLS  LandSlopeSev:LandContourHLS 
+#-1.336e+04               	-8.760e+04 
+#LandSlopeMod:LandContourLow  LandSlopeSev:LandContourLow 
+#6.053e+04                	6.398e+04
 summary(my_model)
-##
-##Call:
-##lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
-##GrLivArea + LandSlope * LotArea + LandContour + LandContour *
-##GrLivArea + LandContour * LotArea + LandSlope * LandContour,
-##data = train)
-##
-##Residuals:
-##Min  	1Q  Median  	3Q 	Max
-##-189872  -28064	-225   22270  330592
-##
-##Coefficients:
-##Estimate Std. Error t value Pr(>|t|)   
-##(Intercept)             	-5.798e+03  4.829e+03  -1.201  0.23012   
-##GrLivArea                	1.076e+02  3.164e+00  34.007  < 2e-16 ***
-##LotArea                  	2.514e+00  3.929e-01   6.400 2.10e-10 ***
-##LandSlopeMod            	-3.539e+04  2.776e+04  -1.275  0.20260   
-##LandSlopeSev             	4.192e+04  7.837e+04   0.535  0.59281   
-##LandContourBnk           	1.003e+05  1.597e+04   6.278 4.54e-10 ***
-##LandContourHLS           	1.907e+04  2.734e+04   0.697  0.48564   
-##LandContourLow          	-3.524e+03  3.904e+04  -0.090  0.92809    
-##GrLivArea:LandSlopeMod   	3.285e+01  1.378e+01   2.384  0.01728 * 
-##GrLivArea:LandSlopeSev  	-3.920e+01  5.582e+01  -0.702  0.48262   
-##LotArea:LandSlopeMod    	-2.766e+00  1.059e+00  -2.611  0.00912 **
-##LotArea:LandSlopeSev    	-2.707e+00  1.041e+00  -2.600  0.00942 **
-##GrLivArea:LandContourBnk	-7.794e+01  1.139e+01  -6.841 1.16e-11 ***
-##GrLivArea:LandContourHLS 	8.817e+00  1.671e+01   0.528  0.59777   
-##GrLivArea:LandContourLow	-2.587e+01  2.342e+01  -1.105  0.26951   
-##LotArea:LandContourBnk  	-2.593e+00  1.016e+00  -2.552  0.01080 * 
-##LotArea:LandContourHLS   	9.315e-01  1.117e+00   0.834  0.40430   
-##LotArea:LandContourLow   	1.046e+00  1.054e+00   0.992  0.32153   
-##LandSlopeMod:LandContourBnk  1.372e+04  2.086e+04   0.658  0.51076   
-##LandSlopeSev:LandContourBnk  1.990e+05  1.020e+05   1.952  0.05116 . 
-##LandSlopeMod:LandContourHLS -1.336e+04  2.074e+04  -0.644  0.51965   
-##LandSlopeSev:LandContourHLS -8.760e+04  8.851e+04  -0.990  0.32246   
-##LandSlopeMod:LandContourLow  6.053e+04  2.638e+04   2.295  0.02190 * 
-##LandSlopeSev:LandContourLow  6.398e+04  6.228e+04   1.027  0.30450   
-##---
-##Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-##
-##Residual standard error: 51560 on 1436 degrees of freedom
-##Multiple R-squared:  0.5854, Adjusted R-squared:  0.5788
-##F-statistic: 88.16 on 23 and 1436 DF,  p-value: < 2.2e-16
+
+#Call:
+#lm(formula = SalePrice ~ GrLivArea + LotArea + LandSlope + LandSlope *
+#GrLivArea + LandSlope * LotArea + LandContour + LandContour *
+#GrLivArea + LandContour * LotArea + LandSlope * LandContour,
+#data = train)
+
+#Residuals:
+#Min  	1Q  Median  	3Q 	Max
+#-189872  -28064	-225   22270  330592
+
+#Coefficients:
+#Estimate Std. Error t value Pr(>|t|)   
+#(Intercept)             	-5.798e+03  4.829e+03  -1.201  0.23012   
+#GrLivArea                	1.076e+02  3.164e+00  34.007  < 2e-16 ***
+#LotArea                  	2.514e+00  3.929e-01   6.400 2.10e-10 ***
+#LandSlopeMod            	-3.539e+04  2.776e+04  -1.275  0.20260   
+#LandSlopeSev             	4.192e+04  7.837e+04   0.535  0.59281   
+#LandContourBnk           	1.003e+05  1.597e+04   6.278 4.54e-10 ***
+#LandContourHLS           	1.907e+04  2.734e+04   0.697  0.48564   
+#LandContourLow          	-3.524e+03  3.904e+04  -0.090  0.92809    
+#GrLivArea:LandSlopeMod   	3.285e+01  1.378e+01   2.384  0.01728 * 
+#GrLivArea:LandSlopeSev  	-3.920e+01  5.582e+01  -0.702  0.48262   
+#LotArea:LandSlopeMod    	-2.766e+00  1.059e+00  -2.611  0.00912 **
+#LotArea:LandSlopeSev    	-2.707e+00  1.041e+00  -2.600  0.00942 **
+#GrLivArea:LandContourBnk	-7.794e+01  1.139e+01  -6.841 1.16e-11 ***
+#GrLivArea:LandContourHLS 	8.817e+00  1.671e+01   0.528  0.59777   
+#GrLivArea:LandContourLow	-2.587e+01  2.342e+01  -1.105  0.26951   
+#LotArea:LandContourBnk  	-2.593e+00  1.016e+00  -2.552  0.01080 * 
+#LotArea:LandContourHLS   	9.315e-01  1.117e+00   0.834  0.40430   
+#LotArea:LandContourLow   	1.046e+00  1.054e+00   0.992  0.32153   
+#LandSlopeMod:LandContourBnk  1.372e+04  2.086e+04   0.658  0.51076   
+#LandSlopeSev:LandContourBnk  1.990e+05  1.020e+05   1.952  0.05116 . 
+#LandSlopeMod:LandContourHLS -1.336e+04  2.074e+04  -0.644  0.51965   
+#LandSlopeSev:LandContourHLS -8.760e+04  8.851e+04  -0.990  0.32246   
+#LandSlopeMod:LandContourLow  6.053e+04  2.638e+04   2.295  0.02190 * 
+#LandSlopeSev:LandContourLow  6.398e+04  6.228e+04   1.027  0.30450   
+#---
+#Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+#Residual standard error: 51560 on 1436 degrees of freedom
+#Multiple R-squared:  0.5854, Adjusted R-squared:  0.5788
+#F-statistic: 88.16 on 23 and 1436 DF,  p-value: < 2.2e-16
 par(mfrow = c(2, 2))
 plot(my_model)
-##Warning: not plotting observations with leverage one:
-##694, 1397
+#Warning: not plotting observations with leverage one:
+#694, 1397
 #editing my model down to only the significalnt variables
 #Create the 'Banked' column
 train$Banked <- ifelse(train$LandContour == "Bnk", 1, 0)
@@ -422,28 +417,28 @@ train$Moderate <- ifelse(train$LandSlope == "Mod", 1, 0)
 
 my_model_2 <- lm(SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data =train)
 my_model_2
-##
-##Call:
-##lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
-##LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
-##
-##Coefficients:
-##(Intercept)         	GrLivArea           	LotArea 
-##-5559.854           	108.463             	2.440 
-##Banked	GrLivArea:Moderate  LotArea:LandSlopeMod 
-##97961.266            	16.388            	-1.652 
-##LotArea:LandSlopeSev  	GrLivArea:Banked    	LotArea:Banked 
-##-1.826           	-84.619            	-1.519
+
+#Call:
+#lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
+#LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
+
+#Coefficients:
+#(Intercept)         	GrLivArea           	LotArea 
+#-5559.854           	108.463             	2.440 
+#Banked	GrLivArea:Moderate  LotArea:LandSlopeMod 
+#97961.266            	16.388            	-1.652 
+#LotArea:LandSlopeSev  	GrLivArea:Banked    	LotArea:Banked 
+#-1.826           	-84.619            	-1.519
 summary(my_model_2)
-##
-##Call:
-##lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
-##LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
-##
-##Residuals:
-##Min  	1Q  Median  	3Q 	Max
-##-191108  -28826	-816   22212  329282
 #
+#Call:
+#lm(formula = SalePrice ~ GrLivArea + LotArea + Banked + GrLivArea:Moderate +
+#LotArea:LandSlope + GrLivArea:Banked + LotArea:Banked, data = train)
+
+#Residuals:
+#Min  	1Q  Median  	3Q 	Max
+#-191108  -28826	-816   22212  329282
+
 #Coefficients:
 #Estimate Std. Error t value Pr(>|t|)   
 #(Intercept)      	-5559.8544  4653.0269  -1.195  0.23233   
@@ -457,7 +452,7 @@ summary(my_model_2)
 #LotArea:Banked      	-1.5189 	0.7526  -2.018  0.04375 * 
 #---
 #Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-#
+
 #Residual standard error: 52050 on 1451 degrees of freedom
 #Multiple R-squared:  0.5732, Adjusted R-squared:  0.5708
 #F-statistic: 243.5 on 8 and 1451 DF,  p-value: < 2.2e-16
