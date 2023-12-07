@@ -371,28 +371,28 @@ summary(my_model)
 #Coefficients:
 #Estimate Std. Error t value Pr(>|t|)   
 #(Intercept)             	-5.798e+03  4.829e+03  -1.201  0.23012   
-#GrLivArea                	1.076e+02  3.164e+00  34.007  < 2e-16 ***
-#LotArea                  	2.514e+00  3.929e-01   6.400 2.10e-10 ***
+#GrLivArea                	1.076e+02  3.164e+00  34.007  < 2e-16***
+#LotArea                  	2.514e+00  3.929e-01   6.400 2.10e-10***
 #LandSlopeMod            	-3.539e+04  2.776e+04  -1.275  0.20260   
 #LandSlopeSev             	4.192e+04  7.837e+04   0.535  0.59281   
-#LandContourBnk           	1.003e+05  1.597e+04   6.278 4.54e-10 ***
+#LandContourBnk           	1.003e+05  1.597e+04   6.278 4.54e-10***
 #LandContourHLS           	1.907e+04  2.734e+04   0.697  0.48564   
 #LandContourLow          	-3.524e+03  3.904e+04  -0.090  0.92809    
-#GrLivArea:LandSlopeMod   	3.285e+01  1.378e+01   2.384  0.01728 * 
+#GrLivArea:LandSlopeMod   	3.285e+01  1.378e+01   2.384  0.01728* 
 #GrLivArea:LandSlopeSev  	-3.920e+01  5.582e+01  -0.702  0.48262   
-#LotArea:LandSlopeMod    	-2.766e+00  1.059e+00  -2.611  0.00912 **
-#LotArea:LandSlopeSev    	-2.707e+00  1.041e+00  -2.600  0.00942 **
-#GrLivArea:LandContourBnk	-7.794e+01  1.139e+01  -6.841 1.16e-11 ***
+#LotArea:LandSlopeMod    	-2.766e+00  1.059e+00  -2.611  0.00912**
+#LotArea:LandSlopeSev    	-2.707e+00  1.041e+00  -2.600  0.00942**
+#GrLivArea:LandContourBnk	-7.794e+01  1.139e+01  -6.841 1.16e-11***
 #GrLivArea:LandContourHLS 	8.817e+00  1.671e+01   0.528  0.59777   
 #GrLivArea:LandContourLow	-2.587e+01  2.342e+01  -1.105  0.26951   
-#LotArea:LandContourBnk  	-2.593e+00  1.016e+00  -2.552  0.01080 * 
+#LotArea:LandContourBnk  	-2.593e+00  1.016e+00  -2.552  0.01080* 
 #LotArea:LandContourHLS   	9.315e-01  1.117e+00   0.834  0.40430   
 #LotArea:LandContourLow   	1.046e+00  1.054e+00   0.992  0.32153   
 #LandSlopeMod:LandContourBnk  1.372e+04  2.086e+04   0.658  0.51076   
-#LandSlopeSev:LandContourBnk  1.990e+05  1.020e+05   1.952  0.05116 . 
+#LandSlopeSev:LandContourBnk  1.990e+05  1.020e+05   1.952  0.05116. 
 #LandSlopeMod:LandContourHLS -1.336e+04  2.074e+04  -0.644  0.51965   
 #LandSlopeSev:LandContourHLS -8.760e+04  8.851e+04  -0.990  0.32246   
-#LandSlopeMod:LandContourLow  6.053e+04  2.638e+04   2.295  0.02190 * 
+#LandSlopeMod:LandContourLow  6.053e+04  2.638e+04   2.295  0.02190* 
 #LandSlopeSev:LandContourLow  6.398e+04  6.228e+04   1.027  0.30450   
 #---
 #Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
