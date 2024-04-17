@@ -10,10 +10,10 @@
 - Became team lead in 2021
 - Became proficienct in customer service and using ticket-based systems
 - Honed my troubleshooting and problem solving skills
-- Took on role of full-time staff during all-hands on deck meetings
+- Took on role of full-time tier 2 Help Desk staff during all-hands on deck meetings
 
-### Hobbies
-- I play trombone
+### Hobbies and Interests
+- I've played trombone for over 10 years
 - I enjoy going to the track and drifting in a 1999 Mazda Miata
 - I do campus ministry with Cru
   
