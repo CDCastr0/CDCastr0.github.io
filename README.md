@@ -23,4 +23,4 @@ Used both Simple and Multiple Linear Regression to propose a solution to the Kag
  
 -  [Kaggle Overview](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data?select=train.csv)
  
-- [Project Page](https://cdcastr0.github.io/projects/Ames_Housing_Price_Prediction/Project1.rmd)
+- [Project Page](https://cdcastr0.github.io/projects/Ames_Housing_Price_Prediction/)
