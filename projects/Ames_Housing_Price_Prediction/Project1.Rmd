@@ -143,19 +143,19 @@ See Figure 11
 The analysis of the three models indicates that MLR 2 (SalePrice ~ GrLivArea + X1stFlrSF + YearBuilt) is the most robust in predicting future sale prices of homes in Ames, Iowa. This model not only provides the highest adjusted R2 value, showing that it explains a greater variance in sale prices than the other models, but it also has the lowest CV PRESS and RMSE scores, indicating superior predictive accuracy and reliability. The inclusion of the house's age (YearBuilt) and first-floor square footage (X1stFlrSF) alongside the living area significantly enhances the model's effectiveness. This model is recommended for stakeholders interested in an accurate and reliable prediction of home prices in Ames, potentially assisting in real estate investment decisions, market analysis, and economic studies related to housing market dynamics.
 
 ## Appendix
-![Figure 1: Scatter Plot of Sale Price vs Living Area](fig1.png)
-![Figure 2: QQ Plot](fig2.png)
-![Figure 3: Scatter Plot of Residuals](fig3.png)
-![Figure 4: Plot of Cook's D by House ID](fig4.png)
-![Figure 5: Confidence Intervals for three neighborhoods](fig5.png)
-![Figure 6: Confidence Interval for North Ames](fig6.png)
-![Figure 7: Confidence Interval for Edwards](fig7.png)
-![Figure 8: Confidence Intervals for Brook Side](fig8.png)
-![Figure 9: SLR residuals, Cook's D and leverage](fig9.png)
-![Figure 10: MLR residuals, Cook's D and leverage](fig10.png)
-![Figure 11: Custom MLR residuals, Cook's D and leverage](fig11.png)
-![Figure 12: Parameter Estimates for Analysis 1 Model](fig12.png)
-![Figure 13: Continued Parameter Estimates for Analysis 1 Model](fig13.png)
+![Figure 1: Scatter Plot of Sale Price vs Living Area](assets\project_images\Ames_Housing_Proj1fig1.png)
+![Figure 2: QQ Plot](assets\project_images\Ames_Housing_Proj1fig2.png)
+![Figure 3: Scatter Plot of Residuals](assets\project_images\Ames_Housing_Proj1fig3.png)
+![Figure 4: Plot of Cook's D by House ID](assets\project_images\Ames_Housing_Proj1fig4.png)
+![Figure 5: Confidence Intervals for three neighborhoods](assets\project_images\Ames_Housing_Proj1fig5.png)
+![Figure 6: Confidence Interval for North Ames](assets\project_images\Ames_Housing_Proj1fig6.png)
+![Figure 7: Confidence Interval for Edwards](assets\project_images\Ames_Housing_Proj1fig7.png)
+![Figure 8: Confidence Intervals for Brook Side](assets\project_images\Ames_Housing_Proj1fig8.png)
+![Figure 9: SLR residuals, Cook's D and leverage](assets\project_images\Ames_Housing_Proj1fig9.png)
+![Figure 10: MLR residuals, Cook's D and leverage](assets\project_images\Ames_Housing_Proj1fig10.png)
+![Figure 11: Custom MLR residuals, Cook's D and leverage](assets\project_images\Ames_Housing_Proj1fig11.png)
+![Figure 12: Parameter Estimates for Analysis 1 Model](assets\project_images\Ames_Housing_Proj1fig12.png)
+![Figure 13: Continued Parameter Estimates for Analysis 1 Model](assets\project_images\Ames_Housing_Proj1fig13.png)
 
 ### Websites:
 - CDCastr0.github.io
