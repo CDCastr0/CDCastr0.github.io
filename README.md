@@ -6,10 +6,11 @@
 -    M.S., Data Science   | Southern Methodist University (_in-progress_)
 
 ### Work Experience
-**IT Help Desk Student Worker Team Lead @ SMU OIT (_August 2019 - Present_)**
+**IT Help Desk Student Worker @ SMU OIT (_August 2019 - Present_)**
 - Became team lead in 2021
 - Became proficienct in customer service and using ticket-based systems
 - Honed my troubleshooting and problem solving skills
+- Took on role of full-time staff during all-hands on deck meetings
 
 ### Projects
 **Beer Case Study**
