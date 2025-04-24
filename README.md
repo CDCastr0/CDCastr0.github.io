@@ -1,31 +1,53 @@
-# Data Scientist
+# Christian Castro - Data Scientist
 
-### Education
+## Education
+- M.S., Data Science | Southern Methodist University (_in-progress_)
 - B.A., Religious Studies | Southern Methodist University (_2023_)
- 
--    M.S., Data Science   | Southern Methodist University (_in-progress_)
 
-### Work Experience
+## Skills & Technical Expertise
+- **Programming Languages**: R, Python, SQL
+- **Data Analysis & Visualization**: Tableau, Power BI, RShiny
+- **Machine Learning**: Regression, Classification, Clustering, NLP
+- **Cloud Computing**: AWS, Azure
+- **Tools & Technologies**: Git, Docker, Jupyter Notebooks
+- **AI Tools**: Cursor, ChatGPT, Midjourney
+
+## Work Experience
 **IT Help Desk Student Worker @ SMU OIT (_August 2019 - Present_)**
 - Became team lead in 2021
-- Became proficienct in customer service and using ticket-based systems
-- Honed my troubleshooting and problem solving skills
+- Became proficient in customer service and using ticket-based systems
+- Honed my troubleshooting and problem-solving skills
 - Took on role of full-time tier 2 Help Desk staff during all-hands on deck meetings
 
-### Hobbies and Interests
+## Projects
+
+### Digital Translation in the AI Era: Building an App to Overcome Language Barriers
+Used MCP tools like Cursor to build an application that provides realistic-voice translations of YouTube videos, helping users overcome language barriers.
+- [Project Video](https://youtu.be/h0SNS2tNr74)
+- [Project Details](https://cdcastr0.github.io/projects/Digital_Translation)
+
+### Beer Case Study
+Analyzed trends in market data to propose to a hypothetical client. Used foundational analytical methods in R to suggest a strategy to reach underserved niches by identifying the relationship between IBU and ABV, as well as identifying areas with the most craft beer culture.
+- [Case Study Video](https://youtu.be/M1ZI4eY9dM0)
+- [Project Details](https://cdcastr0.github.io/projects/Beers_Case_Study)
+
+### Ames, Iowa Housing Project
+Used both Simple and Multiple Linear Regression to propose a solution to the Kaggle Ames Housing Price Prediction competition. My partner Christy and I found models that predicted price via SLR and MLR as well as built an RShiny App to display home prices based on neighborhood.
+- [Kaggle Overview](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data?select=train.csv)
+- [Project Page](https://cdcastr0.github.io/projects/Ames_Housing_Price_Prediction)
+
+## Research Interests
+- Natural Language Processing
+- Machine Learning Applications
+- AI Ethics
+- Data Visualization
+
+## Hobbies and Interests
 - I've played trombone for over 10 years
 - I enjoy going to the track and drifting in a 1999 Mazda Miata
 - I do campus ministry with Cru
-  
-### Projects
-**Beer Case Study**
-   
-Analyzed trends in market data to propose to a hypothetical client. Used foundational analytical methods in R to suggest a strategy to reach underserved niches by identifying the relationship between IBU and ABV, as well as identifying areas with the most craft beer culture.
- 
-**Ames, Iowa Housing Project**
-   
-Used both Simple and Multiple Linear Regression to propose a solution to the Kaggle Ames Housing Price Prediction competition. My partner Christy and I found models that predicted price via SLR and MLR as well as built an RShiny App to display home prices based on neighborhood. 
- 
--  [Kaggle Overview](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data?select=train.csv)
- 
-- [Project Page](https://cdcastr0.github.io/projects/Ames_Housing_Price_Prediction)
+
+## Contact
+- GitHub: [CDCastr0](https://github.com/CDCastr0)
+- LinkedIn: [Christian Castro](https://www.linkedin.com/in/christiancastr/) 
+- Email: cdcastro@smu.edu
