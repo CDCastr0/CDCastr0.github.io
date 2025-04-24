@@ -155,6 +155,6 @@ This project was completed in collaboration with Max Pagan, with whom I worked c
 The complementary skills of our team allowed us to approach the problem from multiple angles and develop a more comprehensive solution than would have been possible individually.
 
 <div class="project-links">
-  <a href="https://amaxpagan.shinyapps.io/RShinyApp/" target="_blank">View Interactive App</a>
+  <a href="https://cdcastr0.shinyapps.io/Ames_Housing_Project/" target="_blank">View Interactive App</a>
   <a href="https://github.com/CDCastr0/Ames-Housing-Analysis" target="_blank">View Code Repository</a>
 </div> 
