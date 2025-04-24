@@ -47,10 +47,12 @@ Used both Simple and Multiple Linear Regression to propose a solution to the Kag
 - [Project Page](https://cdcastr0.github.io/projects/Ames_Housing_Price_Prediction)
 
 ## Research Interests
-- Natural Language Processing
-- Machine Learning Applications
-- AI Ethics
-- Data Visualization
+- **Technology & Society**: Exploring how technological advancements shape social structures and cultural norms
+- **Educational Accessibility**: Leveraging technology to democratize education and skill development
+- **Interdisciplinary Approach**: Blending religious studies and data science to gain holistic perspectives on human behavior
+- **Breaking Barriers**: Using AI and NLP to overcome communication limitations across diverse communities
+- **Machine Learning Applications**: Developing practical solutions to real-world problems
+- **AI Ethics**: Ensuring responsible development and deployment of AI technologies
 
 ## Hobbies and Interests
 - **Motorsports**: Avid Formula 1 fan who watches races every week
