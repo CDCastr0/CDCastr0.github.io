@@ -1,8 +1,3 @@
----
-layout: default
-title: Digital Translation in the AI Era
----
-
 # Digital Translation in the AI Era
 
 [← Back to Main Page](https://cdcastr0.github.io)

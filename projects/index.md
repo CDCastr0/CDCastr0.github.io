@@ -1,8 +1,3 @@
----
-layout: default
-title: Projects
----
-
 # Projects
 
 [← Back to Main Page](https://cdcastr0.github.io)

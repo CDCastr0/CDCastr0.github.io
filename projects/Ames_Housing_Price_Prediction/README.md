@@ -1,8 +1,3 @@
----
-layout: default
-title: Ames Iowa Housing Project
----
-
 # Ames Iowa Housing Project
 
 [← Back to Main Page](https://cdcastr0.github.io)

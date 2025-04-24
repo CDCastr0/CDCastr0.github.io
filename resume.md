@@ -1,8 +1,3 @@
----
-layout: default
-title: Resume
----
-
 # Christian Castro
 
 [← Back to Main Page](https://cdcastr0.github.io)

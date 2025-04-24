@@ -1,24 +1,5 @@
 title: Christian Castro
 logo: /assets/img/headshot2.png
-description: Data Scientist
-author: Christian Castro
-email: cdcastro@smu.edu
-baseurl: ""
-url: "https://cdcastr0.github.io"
-github_username: CDCastr0
-linkedin_username: christiancastr
+#description: text below image
 #show_downloads: true
 theme: jekyll-theme-minimal
-
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# Dark mode settings
-enable_dark_mode: true
-default_mode: auto  # options: light, dark, auto
-
-# Google Analytics
-# google_analytics: UA-XXXXXXXX-X

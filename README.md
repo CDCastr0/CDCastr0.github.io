@@ -1,8 +1,3 @@
----
-layout: default
-title: Home
----
-
 # Christian Castro - Data Scientist
 
 ## Table of Contents
