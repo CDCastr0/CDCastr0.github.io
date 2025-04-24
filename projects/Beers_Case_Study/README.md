@@ -1,5 +1,15 @@
 # Beer Case Study
 
+[← Back to Main Page](https://cdcastr0.github.io)
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Key Findings](#key-findings)
+- [Methodology](#methodology)
+- [Project Demo](#project-demo)
+- [Tools and Technologies](#tools-and-technologies)
+- [Applications and Insights](#applications-and-insights)
+
 ## Project Overview
 This case study analyzed market data for a hypothetical client in the brewing industry. The analysis focused on identifying market trends, consumer preferences, and potential opportunities for brewers looking to enter or expand in the craft beer market.
 
@@ -32,4 +42,7 @@ Watch the presentation of the case study findings:
 - Strategic recommendations for market entry points
 - Product development guidance based on consumer preferences
 - Geographic targeting strategies for new brewery operations
-- Competitive analysis of the current craft beer market landscape 
+- Competitive analysis of the current craft beer market landscape
+
+---
+[← Back to Main Page](https://cdcastr0.github.io) | [View All Projects](https://cdcastr0.github.io#projects) 

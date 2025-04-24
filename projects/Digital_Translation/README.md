@@ -1,5 +1,15 @@
 # Digital Translation in the AI Era
 
+[← Back to Main Page](https://cdcastr0.github.io)
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Technologies Used](#technologies-used)
+- [Project Demo](#project-demo)
+- [Impact and Applications](#impact-and-applications)
+- [Future Development](#future-development)
+
 ## Project Overview
 This project focuses on building an application to overcome language barriers using AI technology. By leveraging machine learning and natural language processing, I developed a tool that provides realistic-voice translations of YouTube videos, making content accessible across different languages.
 
@@ -31,4 +41,7 @@ Watch the full demonstration of the project:
 - Expanding language support to include more rare and indigenous languages
 - Improving real-time processing speed
 - Adding context-aware translations for specialized terminology
-- Developing offline capabilities for areas with limited internet access 
+- Developing offline capabilities for areas with limited internet access
+
+---
+[← Back to Main Page](https://cdcastr0.github.io) | [View All Projects](https://cdcastr0.github.io#projects) 

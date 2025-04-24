@@ -1,13 +1,15 @@
-Untitled
-================
-Christian
-2024-04-17
-
-## R Markdown
-
 # Ames Iowa Housing Project
 
-By Christy Wachira and Christian Castro 15 April 2024
+[← Back to Main Page](https://cdcastr0.github.io)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Data Description](#data-description)
+- [Analysis Question 1: Relationship between Sale Price and Living Area in Specific Neighborhoods](#analysis-question-1-relationship-between-sale-price-and-living-area-in-specific-neighborhoods)
+- [Analysis Question 2: Predictive Models for House Prices in Ames, Iowa](#analysis-question-2-predictive-models-for-house-prices-in-ames-iowa)
+- [R Shiny Application](#r-shiny-price-v-living-area-chart)
+
+By Christy Wachira and Christian Castro | 15 April 2024
 
 ## Introduction
 
@@ -54,16 +56,16 @@ The dataset used in this study is the Ames, Iowa Housing dataset,
 sourced from Kaggle, a popular online platform for data science
 competitions and datasets. The dataset was compiled by Dean De Cock for
 use in data science education and is based on public information from
-the Ames, Iowa Assessor’s Office. The dataset contains information on
+the Ames, Iowa Assessor's Office. The dataset contains information on
 residential property sales in Ames, Iowa, from 2006 to 2010. It consists
 of 2,930 observations and 80 variables, including 79 explanatory
-variables and the target variable, ‘SalePrice’. The explanatory
+variables and the target variable, 'SalePrice'. The explanatory
 variables encompass a wide range of features, such as lot size, building
 type, number of rooms, various area measurements, overall quality, year
 built, and many others. The dataset is split into two parts: a training
 set (1,460 observations) and a test set (1,459 observations). The
-training set includes the ‘SalePrice’ variable and is used for model
-building and evaluation. The test set does not include the ‘SalePrice’
+training set includes the 'SalePrice' variable and is used for model
+building and evaluation. The test set does not include the 'SalePrice'
 variable and is used for the Kaggle competition to assess the predictive
 performance of the developed models.
 
@@ -135,11 +137,11 @@ the observations from the NAmes, Edwards, and BrkSide neighborhoods.
 - Equal Variance: Based on Figure 3, we will assume equal variance due
   to the random nature of the distribution of residuals.
 
-### Influential point analysis (Cook’s D and Leverage)
+### Influential point analysis (Cook's D and Leverage)
 
-Figure 4 is a graph of Cook’s Distance by Observation Number. Visually
+Figure 4 is a graph of Cook's Distance by Observation Number. Visually
 there is further investigation needed. There are a few points with a
-high Cook’s Distance Influential points: 19 48 58 64 70 80 104 131 136
+high Cook's Distance Influential points: 19 48 58 64 70 80 104 131 136
 140 157 167 169 180 186 190 205 227 240 302 322 339 370 372 While there
 seem to be a lot of influential points, in a data set of almost 3000
 observations, these are not that many. After reviewing the points, they
@@ -216,7 +218,7 @@ sale prices based on different sets of predictors.
 The residual plot against the predicted values shows a pattern,
 indicating potential non-linearity or an omitted variable bias.
 Residuals increase with the increase in predicted values, suggesting
-homogeneity of variance. There are a few points with high Cook’s D
+homogeneity of variance. There are a few points with high Cook's D
 values that could be potential outliers or influential points. Most data
 points have low leverage, but there are some points with high leverage,
 indicating they might have a substantial impact on the parameter
@@ -228,7 +230,7 @@ There is less of a pattern in the residuals for MLR 1 compared to SLR,
 but there still appears to be some curvature and homogeneity of variance
 present. This indicates that while adding FullBath has improved the
 model, there may still be missing explanatory factors. Like SLR, there
-are a few observations with a higher Cook’s D value, suggesting they
+are a few observations with a higher Cook's D value, suggesting they
 could be influential to the model fit. The leverage plot shows that
 there are a few points with higher leverage compared to the rest of the
 data, which might be impacting the regression estimates. See Figure 10
@@ -237,9 +239,9 @@ data, which might be impacting the regression estimates. See Figure 10
 
 The residuals appear to show a slight improvement in homogeneity of
 variance and linearity compared to the previous models. There is an
-observation with a particularly high Cook’s D value, indicating a very
+observation with a particularly high Cook's D value, indicating a very
 influential point in the dataset that could be disproportionately
-affecting the model’s predictions. As with Cook’s D, there is a notable
+affecting the model's predictions. As with Cook's D, there is a notable
 observation with high leverage, which should be investigated further as
 it can have an effect on the regression equation. See Figure 11
 
@@ -259,9 +261,9 @@ future sale prices of homes in Ames, Iowa. This model not only provides
 the highest adjusted R2 value, showing that it explains a greater
 variance in sale prices than the other models, but it also has the
 lowest CV PRESS and RMSE scores, indicating superior predictive accuracy
-and reliability. The inclusion of the house’s age (YearBuilt) and
+and reliability. The inclusion of the house's age (YearBuilt) and
 first-floor square footage (X1stFlrSF) alongside the living area
-significantly enhances the model’s effectiveness. This model is
+significantly enhances the model's effectiveness. This model is
 recommended for stakeholders interested in an accurate and reliable
 prediction of home prices in Ames, potentially assisting in real estate
 investment decisions, market analysis, and economic studies related to
@@ -274,7 +276,7 @@ Area](assets\project_images\Ames_Housing_Proj1fig1.png) ![Figure 2: QQ
 Plot](assets\project_images\Ames_Housing_Proj1fig2.png) ![Figure 3:
 Scatter Plot of
 Residuals](assets\project_images\Ames_Housing_Proj1fig3.png) ![Figure 4:
-Plot of Cook’s D by House
+Plot of Cook's D by House
 ID](assets\project_images\Ames_Housing_Proj1fig4.png) ![Figure 5:
 Confidence Intervals for three
 neighborhoods](assets\project_images\Ames_Housing_Proj1fig5.png)
@@ -284,11 +286,11 @@ Confidence Interval for
 Edwards](assets\project_images\Ames_Housing_Proj1fig7.png) ![Figure 8:
 Confidence Intervals for Brook
 Side](assets\project_images\Ames_Housing_Proj1fig8.png) ![Figure 9: SLR
-residuals, Cook’s D and
+residuals, Cook's D and
 leverage](assets\project_images\Ames_Housing_Proj1fig9.png) ![Figure 10:
-MLR residuals, Cook’s D and
+MLR residuals, Cook's D and
 leverage](assets\project_images\Ames_Housing_Proj1fig10.png) ![Figure
-11: Custom MLR residuals, Cook’s D and
+11: Custom MLR residuals, Cook's D and
 leverage](assets\project_images\Ames_Housing_Proj1fig11.png) ![Figure
 12: Parameter Estimates for Analysis 1
 Model](assets\project_images\Ames_Housing_Proj1fig12.png) ![Figure 13:
@@ -450,7 +452,7 @@ FullBath; output out=mlr1_results r=residual p=predicted cookd=cooksd;
 run; quit;
 
 /\* MLR 2 \*/ proc reg data=train_data; model SalePrice = GrLivArea
-’1stFlrSF’n YearBuilt; output out=mlr2_results r=residual p=predicted
+'1stFlrSF'n YearBuilt; output out=mlr2_results r=residual p=predicted
 cookd=cooksd; run; quit;
 
 R code:
@@ -531,3 +533,6 @@ rmse_simple
 rmse_mlr1
 rmse_mlr2
 ```
+
+---
+[← Back to Main Page](https://cdcastr0.github.io) | [View All Projects](https://cdcastr0.github.io#projects)
