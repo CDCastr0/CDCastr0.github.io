@@ -10,8 +10,13 @@
 - Became team lead in 2021
 - Became proficienct in customer service and using ticket-based systems
 - Honed my troubleshooting and problem solving skills
-- Took on role of full-time staff during all-hands on deck meetings
+- Took on role of full-time tier 2 Help Desk staff during all-hands on deck meetings
 
+### Hobbies and Interests
+- I've played trombone for over 10 years
+- I enjoy going to the track and drifting in a 1999 Mazda Miata
+- I do campus ministry with Cru
+  
 ### Projects
 **Beer Case Study**
    
@@ -19,7 +24,7 @@ Analyzed trends in market data to propose to a hypothetical client. Used foundat
  
 **Ames, Iowa Housing Project**
    
-Used both Simple and Multiple Linear Regression to propose a solution to the Kaggle Ames Housing Price Prediction competition. My partner Max Pagan and I found models that predicted price via SLR and MLR as well as built an RShiny App to display home prices based on neighborhood. 
+Used both Simple and Multiple Linear Regression to propose a solution to the Kaggle Ames Housing Price Prediction competition. My partner Christy and I found models that predicted price via SLR and MLR as well as built an RShiny App to display home prices based on neighborhood. 
  
 -  [Kaggle Overview](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data?select=train.csv)
  
