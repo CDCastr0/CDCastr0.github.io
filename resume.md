@@ -2,6 +2,17 @@
 
 [← Back to Home](https://cdcastr0.github.io)
 
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
+
 ## Contact Information
 - **Email:** [cdcastro@smu.edu](mailto:cdcastro@smu.edu)
 - **Phone:** (504) 215-6527
@@ -137,5 +148,11 @@ Developed regression models for the Kaggle Ames Housing competition and built an
 - Ethical development and deployment of AI
 
 ---
+
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 
 [← Back to Home](https://cdcastr0.github.io) | [Download PDF Resume](https://cdcastr0.github.io/assets/files/Christian.Castro.pdf) 

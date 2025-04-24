@@ -1,6 +1,17 @@
 # Projects
 
-[← Back to Main Page](https://cdcastr0.github.io)
+[← Back to Home](https://cdcastr0.github.io)
+
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
 
 ## Available Projects
 
@@ -20,5 +31,10 @@ Used both Simple and Multiple Linear Regression to propose a solution to the Kag
 
 I'm constantly working on new projects. Check back soon for updates.
 
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 ---
-[← Back to Main Page](https://cdcastr0.github.io) 
+
+[← Back to Home](https://cdcastr0.github.io) 

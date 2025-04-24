@@ -3,3 +3,9 @@ logo: /assets/img/headshot2.png
 #description: text below image
 #show_downloads: true
 theme: jekyll-theme-minimal
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

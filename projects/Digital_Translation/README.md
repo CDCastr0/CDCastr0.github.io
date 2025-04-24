@@ -1,6 +1,17 @@
 # Digital Translation in the AI Era
 
-[← Back to Main Page](https://cdcastr0.github.io)
+[← Back to Home](https://cdcastr0.github.io)
+
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -44,4 +55,10 @@ Watch the full demonstration of the project:
 - Developing offline capabilities for areas with limited internet access
 
 ---
-[← Back to Main Page](https://cdcastr0.github.io) | [View All Projects](https://cdcastr0.github.io#projects) 
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
+
+[← Back to Home](https://cdcastr0.github.io) | [View All Projects](https://cdcastr0.github.io#projects) 

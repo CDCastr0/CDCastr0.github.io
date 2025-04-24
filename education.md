@@ -2,6 +2,17 @@
 
 [← Back to Home](https://cdcastr0.github.io)
 
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
+
 ## Southern Methodist University
 
 ### Master of Science in Data Science
@@ -62,5 +73,11 @@ I believe that education is a lifelong journey that extends beyond formal degree
 This combination allows me to approach data science problems with both analytical rigor and ethical awareness, considering not just what technology can do, but what it should do in service of human flourishing.
 
 ---
+
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 
 [← Back to Home](https://cdcastr0.github.io) | [View My Skills →](https://cdcastr0.github.io/skills) 

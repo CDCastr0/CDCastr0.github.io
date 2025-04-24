@@ -2,6 +2,17 @@
 
 [← Back to Home](https://cdcastr0.github.io)
 
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
+
 ## Technology & Society
 
 I'm fascinated by how technological advancements shape and transform social structures and cultural norms. My research interests in this area include:
@@ -71,5 +82,11 @@ I'm currently involved in several research projects that align with these intere
 - **Ethical AI Frameworks**: Developing guidelines for responsible AI implementation in business contexts
 
 ---
+
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 
 [← Back to Home](https://cdcastr0.github.io) | [View My Personal Interests →](https://cdcastr0.github.io/interests) 

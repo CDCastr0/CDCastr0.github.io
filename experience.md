@@ -2,6 +2,17 @@
 
 [← Back to Home](https://cdcastr0.github.io)
 
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
+
 ## Data Scientist
 **NIT Consulting** | _August 2023 - Present_
 
@@ -98,5 +109,11 @@ Led the electrical systems team for SMU's Formula SAE racing team, designing and
 - Balanced rigorous rehearsal schedule with academic commitments
 
 ---
+
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 
 [← Back to Home](https://cdcastr0.github.io) | [View My Research Interests →](https://cdcastr0.github.io/research) 

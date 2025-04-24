@@ -2,6 +2,17 @@
 
 [← Back to Home](https://cdcastr0.github.io)
 
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
+
 ## Motorsports
 
 I'm an avid motorsports enthusiast with a particular passion for Formula 1 racing. I follow the F1 season diligently, watching every race and staying up-to-date with team developments, technical innovations, and driver performances.
@@ -70,5 +81,11 @@ These diverse interests may seem unrelated to data science at first glance, but 
 I believe that well-rounded individuals bring unique perspectives to technical fields, and my diverse interests help me approach data science problems with creativity, practical wisdom, and human understanding.
 
 ---
+
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 
 [← Back to Home](https://cdcastr0.github.io) | [View My Resume →](https://cdcastr0.github.io/resume) 

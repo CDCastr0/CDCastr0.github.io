@@ -1,0 +1,96 @@
+/* Theme Variables and Styles */
+
+:root {
+  /* Light theme (default) */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --heading-color: #222222;
+  --link-color: #0366d6;
+  --link-hover-color: #044289;
+  --nav-bg: #f8f9fa;
+  --border-color: #dddddd;
+  --code-bg: #f6f8fa;
+  --blockquote-border: #dfe2e5;
+  --button-bg: #f4f4f4;
+  --button-text: #333333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #1e1e2e;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --link-color: #58a6ff;
+  --link-hover-color: #79c0ff;
+  --nav-bg: #252535;
+  --border-color: #444444;
+  --code-bg: #2d2d3d;
+  --blockquote-border: #4d4d5d;
+  --button-bg: #363646;
+  --button-text: #e0e0e0;
+  --card-bg: #252535;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme colors to elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+code, pre {
+  background-color: var(--code-bg);
+}
+
+blockquote {
+  border-left: 4px solid var(--blockquote-border);
+}
+
+hr {
+  border-color: var(--border-color);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Animation for theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 

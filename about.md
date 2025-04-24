@@ -2,6 +2,17 @@
 
 [← Back to Home](https://cdcastr0.github.io)
 
+<div class="navigation-links">
+  <a href="https://cdcastr0.github.io/">Home</a>
+  <a href="https://cdcastr0.github.io/education">Education</a>
+  <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
+  <a href="https://cdcastr0.github.io/experience">Experience</a>
+  <a href="https://cdcastr0.github.io/projects">Projects</a>
+  <a href="https://cdcastr0.github.io/research">Research Interests</a>
+  <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
+  <a href="https://cdcastr0.github.io/resume">Resume</a>
+</div>
+
 ## My Background
 
 I'm a data scientist with a unique interdisciplinary background that combines technical expertise with humanistic understanding. With a Bachelor's in Religious Studies and currently pursuing a Master's in Data Science at Southern Methodist University, I approach technical challenges with a holistic perspective that considers both the technical requirements and their human implications.
@@ -46,5 +57,11 @@ Beyond my professional work, I'm passionate about motorsports, particularly Form
 These diverse interests inform my perspective as a data scientist, reminding me that behind every dataset are real people with complex lives and motivations. The blend of technical skills, humanities background, and varied personal interests allows me to bring a unique perspective to data science challenges.
 
 ---
+
+
+<footer class="site-footer">
+  <p>&copy; 2025 Christian Castro. All rights reserved.</p>
+</footer>
+
 
 [← Back to Home](https://cdcastr0.github.io) | [View My Experience →](https://cdcastr0.github.io/experience) 
