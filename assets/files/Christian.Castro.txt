@@ -1,0 +1,49 @@
+Christian Castro
+Dallas, TX | (504) 215-6527 | cdcastro@smu.edu | linkedin.com/in/christiancastr | cdcastr0.github.io 
+EXPERIENCE
+Data Scientist											     	                 Aug 2023 - Present
+NIT Consulting
+●	Frito-Lay Employee Attrition Analysis
+o	Developed machine learning models (Random Forest and Logistic Regression) to predict attrition 
+o	Created models to identify key indicators influencing and produced a course of action to remedy it
+●	Century21 Real Estate Analytics
+o	Built a predictive model to identify profitable home features
+o	Analyzed market trends to provide insight for pricing strategies across different neighborhoods
+●	Anheuser-Busch Case Study
+o	Analyzed data on beers and breweries to gain an understanding of the tastes of different regions and potential market gaps to fill
+●	Airbnb Paris Housing Study
+o	Created various prediction models to analyze features like bedroom count, bathroom count, geographical distance from landmarks, to predict which Arondissement each listing is in and the competitive market rate
+o	Used GIS to analyze location data and determine distance from well-known features of Paris
+IT Help Desk – Team Lead									                         Aug 2019 – May 2024
+Southern Methodist University
+●	Computer Imaging (Aug 2019 – Nov 2020): 
+o	Oversaw system imaging, software deployment, and device management across campus
+o	Assisted with automation of software installations and network configuration
+●	Help Desk Team Lead (Dec 2020 – May 2024): 
+o	Managed IT support operations resolving issues pertaining to software, hardware, and networking
+o	Developed and maintained knowledge bases and documentation for troubleshooting
+o	Gained experience in Active Directory and authentication security using Duo Mobile for system administration
+Campus Minister – Part-Time									                Aug 2023 – Present
+Cru
+●	Managed a $70,000 budget and coordinated logistics for a team of 12 to North Africa for 5 weeks in Summer 2023
+●	Solely led a team of 12 to North Africa for 10 days, managing all finances and logistics in January 2025
+●	Developed financial strategies and contingency planning for an unpredictable environment
+●	Gained skills in cross-cultural communication and interpersonal relationship building 
+●	Raised my own pay package with a team of supporters, developing fundraising and financial development skills
+Formula SAE – Electrical Team Lead                                                                                                                       Aug 2019 – May 2023
+Hilltop Motorsports	 
+•	Received design and execution acknowledgment from head of body dynamics at Tesla in a competitive presentation
+•	Led effort to design and build custom wiring harnesses for Peruna III & IV cars, learning circuit design 
+•	Worked cross-functionally with students of varying technical backgrounds to meet technical needs
+EDUCATION
+Southern Methodist University
+Master of Science in Data Science | GPA: 3.7									        December 2025
+Bachelor of Arts in Religious Studies (Comparative Religion, Christian Tradition)			     	             August 2023
+SKILLS
+•	Programming Languages: Python, R, Java, C++, JavaScript, SQL, SAS, HTML, JSON
+•	Machine Learning & AI: Scikit-Learn, TensorFlow, Keras, Pandas, NLTK, PyTorch, Regression, Clustering, Decision Trees, Neural Networks, Natural Language Processing (NLU/NLG), Large Language Models, Generative AI, Deep Learning, OpenAI APIs, Groq, HuggingFace
+•	Statistics and Data Science: Data wrangling, data cleaning, feature engineering, data exploration, model selection, cloud deployment, client communication, experiment design, time series analysis and prediction
+•	Database Management: SQL, NoSQL, MySQL, MongoDB
+•	Data Visualization & Web Dev: Tableau, PowerBI, Processing, P5.js, D3.js, Three.js, Excel, JavaScript, React, Dashboards, ggplot2
+•	Cloud, DevOps & Deployment: AWS (EC2, S3), GitHub, Docker, Google Cloud, Microsoft Azure
+•	IT & Support: Windows & macOS Administration, Microsoft Office and 365, Network Security, Multi-Factor Authentication, Active Directory, Communication and Customer Service

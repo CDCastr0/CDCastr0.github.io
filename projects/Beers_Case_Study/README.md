@@ -1,3 +1,8 @@
+---
+layout: default
+title: Beer Case Study
+---
+
 # Beer Case Study
 
 [← Back to Main Page](https://cdcastr0.github.io)

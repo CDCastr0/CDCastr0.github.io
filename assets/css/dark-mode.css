@@ -1,0 +1,145 @@
+/* Dark Mode Styling */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #24292e;
+  --heading-color: #0366d6;
+  --link-color: #0366d6;
+  --link-hover-color: #035fc7;
+  --border-color: #e1e4e8;
+  --code-bg-color: #f6f8fa;
+  --code-text-color: #24292e;
+  --blockquote-color: #6a737d;
+  --table-border-color: #dfe2e5;
+  --table-header-bg: #f6f8fa;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --heading-color: #58a6ff;
+  --link-color: #58a6ff;
+  --link-hover-color: #79c0ff;
+  --border-color: #30363d;
+  --code-bg-color: #161b22;
+  --code-text-color: #c9d1d9;
+  --blockquote-color: #8b949e;
+  --table-border-color: #30363d;
+  --table-header-bg: #161b22;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+code, pre {
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
+}
+
+blockquote {
+  color: var(--blockquote-color);
+  border-left-color: var(--border-color);
+}
+
+table {
+  border-color: var(--table-border-color);
+}
+
+table th {
+  background-color: var(--table-header-bg);
+}
+
+hr {
+  background-color: var(--border-color);
+}
+
+.toggle-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-text {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark mode icons */
+.slider:before {
+  content: "☀️";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+input:checked + .slider:before {
+  content: "🌙";
+} 
