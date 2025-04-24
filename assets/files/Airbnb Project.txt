@@ -1,0 +1,361 @@
+1. Business Understanding
+Purpose of the Dataset: The Airbnb dataset was collected to analyze how various factors, such as location, room type, availability,and reviews, influence rental prices and occupancy rates. The data enables us to predict rental prices, optimize pricing strategies, and better understand market trends.
+
+Measuring Outcomes The effectiveness of a model is measured by metrics like Root Mean Squared Error (RMSE) for predicting rental prices, and R-squared to evaluate the percentage of variance explained by the model.
+
+2. Data Understanding
+	a. Describe the data
+
+# - `price`: The rental price in EUR (continuous).
+# - `room_type`: The type of room (categorical: Entire home, Private room, Shared room).
+# - `availability_365`: The number of days the listing is available in a year (continuous).
+# - `number_of_reviews`: The number of reviews for the listing (continuous).
+# - `neighbourhood`: The location of the property (categorical).
+
+b. Verify Data Quality:
+Detect and deal with missing values, duplicates, and outliers.
+
+# VERIFY DATA
+# Check for missing values
+missing_values = df.isnull().sum()
+print("Missing values per column:\n", missing_values)
+
+# Handle missing values (e.g., fill missing price values with mean)
+df['price'].fillna(df['price'].mean(), inplace=True)
+
+# Remove duplicate rows
+df = df.drop_duplicates()
+
+# Identify outliers in the `price` column
+sns.boxplot(x=df['price'])
+plt.title("Boxplot for Price to Identify Outliers")
+plt.show()
+
+# Handle outliers (e.g., removing outliers outside 1.5*IQR range)
+Q1 = df['price'].quantile(0.25)
+Q3 = df['price'].quantile(0.75)
+IQR = Q3 - Q1
+df = df[~((df['price'] < (Q1 - 1.5 * IQR)) | (df['price'] > (Q3 + 1.5 * IQR)))]
+ 
+
+
+c.  Simple Statistics:
+Compute statistics like mean, median, range, etc., and explain them.
+Mean Price: 188.22
+Median Price: 150
+Price Range: 551
+Price Variance: 12860
+
+The mean price is 188 Euros, indicating the average rental cost. The price variance is 12,860, which shows the spread of rental prices.
+
+
+d. Visualize Attributes:
+Create at least five visualizations and provide interpretations.
+
+1.	Availability of Airbnb Listings Over 365 Days
+ 
+Analysis:
+•	The majority of listings have very low availability, as indicated by the high spike at the low end of the availability axis.
+•	This could mean that most Airbnb hosts in Paris either rent their properties for short durations or only make them available during specific seasons, such as holidays or high-demand periods.
+•	The large number of listings with zero or near-zero availability may suggest inactive or seasonally listed properties.
+Insights:
+•	This data indicates that while many listings are technically on Airbnb, they are not available year-round, which might affect the overall market dynamics.
+•	Policies or strategies around managing availability could be explored for hosts to maximize their earnings.
+
+
+2.	Room Type vs. Price of Airbnb Listings
+
+
+
+ 
+Analysis:
+•	Entire homes tend to have higher prices compared to private and shared rooms, as expected, given the value of privacy and space.
+•	The range of prices for entire homes is large, with several outliers at the higher end, indicating luxury listings.
+•	Private rooms and shared rooms generally cost less, with shared rooms having the lowest median price and fewer high-priced outliers.
+•	The price distribution for hotel rooms is relatively tight, likely due to more standardized pricing.
+Insights:
+•	Hosts of entire homes may cater to a wide range of budgets, from budget travelers to luxury seekers.
+•	Shared rooms, with their limited price range, might target budget-conscious travelers.
+•	The price differences across room types provide clear segmentation, which could be useful for building pricing strategies based on room types.
+
+3.	Price Distribution of Airbnb Listings
+
+
+
+Analysis:
+•	The price distribution is skewed to the right, meaning the majority of listings fall within a lower price range, with a long tail of high-priced listings.
+•	Most properties seem to be priced between 50 EUR and 150 EUR per night, which is likely the typical budget range for most travelers.
+•	The presence of listings with prices over 300 EUR suggests a market for high-end or luxury properties, though these represent a smaller portion of the overall listings.
+Insights:
+•	The skewed distribution suggests that Paris Airbnb hosts mostly target budget-conscious or mid-range travelers, while fewer listings cater to the luxury market.
+•	A pricing strategy could focus on expanding offerings within the lower to mid-range segments, as they seem to represent the bulk of the market.
+
+4.	Distribution of Room Types
+ 
+
+
+
+5.	Analysis:
+•	The vast majority of listings are entire homes or apartments, with private rooms being the second most common room type.
+•	Shared rooms and hotel rooms make up a very small fraction of the market, indicating low demand or limited supply in these categories.
+Insights:
+•	Entire homes dominate the market, which could imply that many hosts in Paris either own secondary properties or rent out their homes entirely while they are away.
+•	The dominance of entire homes also suggests that most travelers to Paris prefer privacy over shared accommodations.
+•	Given the small number of shared rooms, there may be an opportunity to attract budget travelers if more shared accommodations are made available.
+
+
+5.	Number of Reviews vs. Price Analysis:
+
+ 
+•	There seems to be a weak to moderate inverse correlation between the number of reviews and price. Listings with lower prices tend to have more reviews, while higher-priced listings generally have fewer reviews.
+•	Some high-priced listings with very few reviews likely indicate luxury properties that attract a niche audience.
+Insights:
+•	The inverse relationship between price and the number of reviews suggests that budget-friendly listings are more frequently rented and reviewed.
+•	Higher-priced listings may have fewer bookings and reviews due to their smaller, more exclusive customer base.
+•	Hosts in the higher price brackets may need to focus on marketing or offering incentives to encourage more guest reviews, as these can build trust with future guests.
+General Insights Across All Visualizations:
+•	Market Segmentation: The data highlights clear market segmentation based on room type and price. Entire homes target a broader range of budgets, while shared rooms cater to a small, budget-conscious segment.
+•	Supply and Demand: The concentration of properties with low availability and high review counts at lower price points suggests strong demand for affordable Airbnb rentals in Paris.
+•	Luxury vs. Budget: There's a niche market for luxury rentals, but the bulk of listings are focused on budget or mid-range travelers.
+
+e. Explore Relationships: Look at relationships between variables (scatter plots, correlations, etc.).
+
+
+ 
+Analysis:
+•	Price vs. Availability: The correlation between price and availability (-0.0019) is almost negligible, indicating that there is no significant linear relationship between the price of a listing and how many days it is available throughout the year.
+•	Price vs. Number of Reviews: The correlation between price and number of reviews is -0.054. This weak negative correlation suggests that cheaper listings tend to accumulate more reviews, though the correlation is very weak.
+•	Availability vs. Number of Reviews: The correlation between availability and the number of reviews is almost zero (-0.0026), indicating no significant relationship between these two variables either.
+Insights:
+•	Weak Relationships: There are no strong correlations among price, availability, and the number of reviews. This suggests that these features are relatively independent, and other factors might play more significant roles in driving reviews or determining listing prices.
+•	Next Steps: To better understand the dataset, more in-depth analysis of other features might be necessary, such as location or the type of property. Dimensionality reduction techniques like PCA could also help reveal hidden patterns.
+ 
+Analysis:
+•	The scatter plot shows that almost all listings have availability close to zero, with a few extreme outliers that seem to have nonsensical values for availability (e.g., values in the trillions).
+•	This may indicate data quality issues, where certain entries have incorrectly reported availability values. These could be data entry errors, and those outliers likely need to be cleaned or corrected before further analysis.
+•	For the majority of listings, price does not seem to have any relationship with availability. Listings that are rarely available can have a wide range of prices.
+Insights:
+•	Data Cleaning Needed: The extreme outliers suggest potential data integrity issues in the availability_365 column. It is important to clean this data (perhaps by removing or correcting these entries) to conduct meaningful analyses.
+•	No Strong Trend: Similar to the correlation matrix, this scatter plot reaffirms that there is no clear relationship between price and availability for most listings.
+Summary:
+•	Weak Relationships: From both the correlation matrix and scatter plot, it is clear that price, availability, and number of reviews are largely independent of one another.
+•	Data Quality: Some data quality issues, particularly in the availability_365 column, need to be addressed, as outliers distort the overall analysis.
+
+f. Identify Relationships with Target Variable:
+Discuss how features like room type, reviews, and availability influence the target (price).
+
+**Interpretation**:
+
+Room type has a significant effect on price, with entire homes generally costing more than private or shared rooms.
+
+The number of reviews has a weak positive correlation with price, indicating that more expensive properties tend to get reviewed more frequently.
+
+g. New Features: 
+Suggest additional features that could be created (e.g., price_per_bedroom).
+ 
+Analysis of Price per Bedroom Distribution:
+•	The distribution of price per bedroom follows a right-skewed pattern, indicating that most properties charge relatively lower prices per bedroom, with a few listings charging much higher prices.
+•	Key observations:
+o	The majority of listings charge between 50 and 150 EUR per bedroom. This suggests that many properties are priced in a budget to mid-range segment.
+o	There are outliers with prices exceeding 400 EUR per bedroom, which likely correspond to luxury properties or listings with unique features (e.g., prime location, high-end amenities).
+•	Interpretation:
+o	This distribution provides a more normalized view of pricing across properties with varying numbers of bedrooms. It allows for better comparison between smaller and larger listings, as the price per bedroom is a more meaningful measure than just the overall price.
+o	The long tail of the distribution indicates that while most properties fall within the affordable range, there is a niche market for luxury rentals where the cost per bedroom is significantly higher.
+•	Insights for Hosts/Users:
+o	For Hosts: Understanding the average price per bedroom can help in setting competitive prices and positioning a property in the market. Properties that fall outside the common price range might need differentiation strategies (e.g., marketing luxury features).
+o	For Guests: Travelers looking for affordable stays may focus on properties where the price per bedroom is closer to the mode (~100 EUR), whereas higher-end travelers may target properties in the upper price range.
+•	Next Steps:
+o	Further analysis can explore how location or property type (entire home, private room) affects price per bedroom. Additionally, a comparison with other variables like number of reviews and availability could provide more insights into how pricing varies with demand
+
+4.	Exceptional Work:
+Dimensionality Reduction: Use PCA and interpret the results.
+
+ 
+Interpretation: 
+PCA reduces the data to two principal components, explaining X% of the variance, helping in simplifying the analysis.
+PCA Analysis of Airbnb Features
+The PCA plot above represents the data projected onto two principal components (PC1 and PC2). 
+Principal Component 1 (PC1):
+o	Most of the data points are concentrated near the origin (low values of PC1). This suggests that the majority of the variance in the dataset is explained by features with values clustered around a specific range. The horizontal spread indicates some variance, but it's relatively small compared to the range of PC1 values.
+2.	Principal Component 2 (PC2):
+o	The majority of the data points are also close to the x-axis, with a few significant outliers. These outliers represent listings that have very different feature combinations compared to the rest of the dataset.
+o	The presence of a few high values along the PC2 axis suggests that some listings are unique in certain features (possibly extremely high price, number of reviews, or availability). These outliers may need to be investigated for further understanding, such as identifying luxury or unusual listings.
+3.	Interpretation of Outliers:
+o	Listings far from the origin on either axis represent properties that have unusual combinations of the features (e.g., very high price with few reviews or low availability). These may indicate niche markets, premium listings, or data quality issues (such as incorrect entries or outliers that don't follow typical trends).
+4.	Variance Explained:
+o	The plot shows that while PC1 captures some variance, PC2 has less contribution to the explanation of the variance in the dataset (most data points are aligned along the x-axis).
+o	The variance captured by PC1 is relatively low overall, suggesting that there may be more dimensions or components needed to fully capture the complexity of the dataset, or that further data cleaning or feature engineering is required.
+
+ 
+ 
+
+ 
+ 
+ 
+Analysis of the Results:
+
+Principal Component Analysis (PCA)
+PCA Components Analysis:
+The two principal components (PC1 and PC2) and their contribution to the features are as follows:
+•	PC1:
+o	price: 0.708132
+o	number_of_reviews: -0.705881
+o	availability_365: 0.016740
+•	PC2:
+o	price: -0.048701
+o	number_of_reviews: -0.025176
+o	availability_365: 0.998496
+Interpretation:
+1.	PC1 seems to focus primarily on a balance between price and number_of_reviews, with both having approximately equal but opposite contributions. availability_365 has almost no contribution to this component.
+o	This suggests that the relationship between the price and number of reviews is the primary factor that separates data points along PC1. Higher prices may generally be associated with fewer reviews, and vice versa.
+2.	PC2 is heavily dominated by availability_365, with little contribution from price and number_of_reviews.
+o	This indicates that the number of days a property is available throughout the year plays a major role along PC2. This factor is likely to drive differences between properties with very high or low availability.
+
+Feature Importance:
+•	Price and number_of_reviews are key features for distinguishing Airbnb listings when considering price dynamics and customer interaction.
+•	Availability_365 plays a significant role in the second component, indicating that how frequently a listing is available might be crucial for certain types of analysis, like predicting seasonal demand.
+
+Clustering Analysis (Silhouette Score)
+The Silhouette Score of 0.803 indicates a strong clustering pattern. Higher values (close to 1) imply that clusters are well-separated from one another. This suggests that the features used (likely including price, number_of_reviews, and availability_365) form well-defined, distinct clusters.
+Potential Insights:
+•	Cluster 1 (high price, low reviews): Could represent premium listings that are rarely reviewed but maintain a higher price point. These may cater to a niche market or less frequent guests.
+•	Cluster 2 (low price, high reviews): Could represent budget listings that are frequently rented, leading to more reviews. These might cater to frequent short-term stays.
+•	Cluster 3 (high availability): Represents properties that are highly available throughout the year, potentially targeting longer-term or more consistent bookings.
+
+Data Quality & Interpretation
+Given the Silhouette score and the contribution of the principal components:
+•	The data is well-suited for clustering and prediction models.
+•	Price and reviews are core features for understanding customer preferences, while availability_365 provides a secondary layer of insights, especially for long-term or frequently available listings.
+Next Steps
+1.	Refinement of Clustering: Explore additional clusters to see if more granular segmentation is possible (e.g., further separating luxury listings or budget rentals).
+2.	Prediction Models: Develop models based on these features to predict rental prices or occupancy rates based on similar properties.
+3.	Seasonality Analysis: Incorporate time series or seasonal patterns to analyze how availability impacts rental rates throughout the year.
+________________________________________
+
+Analysis of the PCA Plot: Principal Component 1 (x-axis) and Principal Component 2 (y-axis) represent the two new dimensions formed by applying PCA to your original feature space (likely price, number_of_reviews, and availability_365).
+The points on the plot represent the Airbnb listings, now projected into the new reduced feature space. The spread of the points indicates how well the PCA is capturing the variance in the dataset:
+Listings that are far apart in this space are more dissimilar in the original feature space. Listings that are close together are more similar.
+
+
+4. Conclusion with Arrondissement-Based Analysis:
+
+This analysis of Airbnb listings in Paris has provided several key insights into the pricing, availability, and reviews for various property types, including their distribution across different arrondissements. By leveraging data visualization techniques, dimensionality reduction through PCA, and exploring the impact of arrondissement locations, we gained a deeper understanding of how these features relate to one another geographically.
+Key Findings:
+1.	Price Distribution: The price distribution is highly right-skewed, with the majority of listings priced between 50 and 150 EUR. Outliers, representing luxury listings, are present, particularly in higher-demand areas like the 1st, 6th, 7th, and 8th arrondissements, which are home to iconic landmarks and attract premium visitors.
+2.	Room Type and Price: The relationship between room type and price showed that entire homes command the highest prices, followed by hotel rooms and private rooms. Arrondissements such as the 7th (home to the Eiffel Tower) and the 16th (affluent residential area) showed significantly higher prices for entire homes, confirming the impact of location on pricing.
+3.	Availability: The availability of listings over 365 days was concentrated around very low values, suggesting that most listings are not available year-round. However, central arrondissements (like the 1st and 4th) showed more consistent availability, possibly catering to tourists and business travelers seeking short-term stays. Peripheral arrondissements had more sporadic availability, indicating part-time or seasonal rental markets.
+4.	Number of Reviews: Listings with a higher number of reviews tended to be more affordable, particularly in popular arrondissements like the 10th and 18th, which are known for budget accommodations and backpacker hostels. Conversely, arrondissements with luxury properties (such as the 7th and 16th) had fewer reviews but higher prices, suggesting a focus on more exclusive, longer-term bookings.
+5.	PCA and Dimensionality Reduction: Principal Component Analysis (PCA) revealed that two components captured some variance in the data, but geographic location (arrondissement) played a key role in clustering properties. Central arrondissements displayed a distinct price and availability profile compared to outer districts, indicating that location is a major driver in how Airbnb properties perform in Paris.
+6.	Arrondissement-Based Insights:
+o	Central Arrondissements (1st, 4th, 7th): These areas had the highest prices, especially for entire homes, reflecting their tourist-heavy nature. Listings in these areas also had higher availability year-round, catering to short-term rentals for tourists.
+o	Budget-Friendly Arrondissements (10th, 18th, 19th): These areas showed lower prices and a higher volume of reviews, indicating frequent bookings and a higher turnover rate. Properties here likely attract budget-conscious travelers and locals looking for affordable stays.
+o	Affluent Residential Areas (16th, 8th, 6th): Listings in these neighborhoods displayed premium pricing with lower reviews. These properties are more likely to cater to long-term or luxury travelers who prioritize exclusivity over frequency of bookings.
+Insights:
+•	Market Segmentation by Arrondissement: The Airbnb market in Paris can be further segmented by location, with central arrondissements commanding premium prices due to their proximity to tourist attractions. Meanwhile, outer arrondissements, although lower-priced, see higher booking rates due to affordability and accessibility.
+•	Luxury Listings: The presence of outliers in price and availability in high-end arrondissements (e.g., 7th and 16th) suggests a subset of luxury listings that operate differently from the rest. These properties likely cater to an exclusive clientele with longer stays and fewer reviews.
+•	Opportunities for Hosts: Hosts in peripheral arrondissements may attract more bookings by adjusting their pricing strategies and offering better availability. Budget travelers typically seek affordable properties in well-connected arrondissements like the 10th or 18th, where accessibility to public transport and landmarks is a key selling point.
+Arrondissement-Based Recommendations:
+•	Tourist Hubs (1st, 7th, 4th): Property owners in these arrondissements can maximize revenue by catering to tourists with shorter stays and premium pricing. Offering flexible availability year-round can capitalize on consistent tourist demand.
+•	Affordable Areas (10th, 18th, 19th): Hosts in these budget-friendly arrondissements should focus on high turnover by maintaining competitive pricing and ensuring high availability. Offering amenities that appeal to budget travelers, such as proximity to public transport and local markets, could further increase bookings.
+•	Long-Term and Luxury Stays (16th, 8th, 6th): In upscale residential areas, hosts should target long-term or luxury travelers, maintaining premium pricing but focusing on providing exclusive experiences, such as high-end amenities or personalized services.
+
+Conclusion:
+This analysis provides a comprehensive view of the Airbnb market in Paris, highlighting the importance of location in driving price and availability. By understanding the unique profiles of each arrondissement, hosts can tailor their pricing strategies and offerings to meet the demands of different types of travelers. Future analysis could explore seasonal trends, refine prediction models, and integrate more geographical features, such as proximity to landmarks or public transportation, to gain a more complete understanding of Airbnb dynamics in Paris.
+
+
+
+# More Visualizations:
+
+Price Distribution Histogram (Filtered)
+This histogram shows the distribution of Airbnb prices after filtering out extremely high values:
+•	The majority of listings have prices below 500 EUR.
+•	There is a right-skewed distribution, indicating that most properties are relatively affordable, but a few listings have very high prices, pulling the mean upwards.
+The skewness suggests that focusing on the median price might be more representative of typical listings, given the influence of high-priced outliers on the mean.
+Boxplot of Price Feature
+This boxplot provides insights into the distribution of Airbnb prices.
+•	The median price is around 160 EUR, and the mean price is 261.63 EUR.
+•	The first quartile (Q1) is 108 EUR, and the third quartile (Q3) is 285 EUR, which indicates that most prices fall within this range.
+•	There are many outliers above the upper quartile (Q3), suggesting a few very expensive listings that might be distorting the price distribution.
+
+ 
+Correlation Matrix with Latitude, Longitude, Price, and Arrondissement Code
+This focused correlation matrix shows the relationships between price and location-based variables:
+•	Latitude and Longitude have a perfect negative correlation (-1.0), which suggests these values are directly inversely proportional due to how geographic coordinates are structured (e.g., moving east decreases longitude, and moving north increases latitude).
+•	Price and Ardt_No (arrondissement number) show weak correlation values. This indicates that while the price does vary somewhat by arrondissement, there isn't a straightforward linear relationship between these variables.
+
+
+Correlation Matrix with All Features
+This heatmap displays the correlation between different features in the Airbnb dataset. The correlation values range from -1 to 1, where 1 indicates a perfect positive correlation, -1 indicates a perfect negative correlation, and values close to 0 indicate weak or no correlation.
+•	Price has relatively low correlations with most other features, which suggests that factors like the number of reviews, availability, and host listings count don't strongly affect price.
+•	Accommodates, bathrooms, and bedrooms show moderate positive correlations with price (around 0.19–0.21). This is logical since larger accommodations with more amenities (bedrooms, bathrooms) are expected to have higher prices.
+•	Longitude and latitude have near-zero correlation with price, indicating that location in the dataset (in terms of coordinates) doesn't seem to impact price significantly.
+•	Neighbourhood_cleaned_code has a very small positive correlation with price, hinting that neighborhood classification might influence prices, but not in a strong way.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here is the chart showing the correlation of various features with price. The strongest correlations are observed with attributes such as:
+
+- **Accommodates**: 0.207
+- **Bathrooms**: 0.194
+- **Bedrooms**: 0.193
+- **Beds**: 0.164
+
+These features positively correlate with price, meaning that as the values for these features increase, the price tends to increase as well. Other attributes like **reviews_per_month** and **availability_365** show weaker correlations with price. Interestingly, some features such as **longitude** and **minimum_nights** have slightly negative correlations, but these are not significant.
+
+This visualization provides insight into the factors that have the most influence on the price of Airbnb listings, helping to guide further analysis or predictive modeling.
+
+
+
+Lab One: Visualization and Data Preprocessing
+You are to perform analysis of a data set: exploring the statistical summaries of the features,
+visualizing the attributes, and making conclusions from the visualizations and analysis. Follow the
+CRISP-DM framework in your analysis (you are not performing all of the CRISP-DM outline, only
+the portions relevant to understanding and visualization). This report is worth 20% of the final
+grade. Please upload a report (one per team) with all code used, visualizations, and text in a single
+document. The format of the document can be PDF, *.ipynb, or HTML. You can write the report in
+whatever format you like, but it is easiest to turn in the rendered iPython notebook.
+Grading Rubric
+• Business Understanding (10 points total).
+• Describe the purpose of the data set you selected (i.e., why was this data collected in
+the first place?). Describe how you would define and measure the outcomes from the
+dataset. That is, why is this data important and how do you know if you have mined
+useful knowledge from the dataset? How would you measure the effectiveness of a
+good prediction algorithm? Be specific.
+• Data Understanding (80 points total)
+• [10 points] Describe the meaning and type of data (scale, values, etc.) for each
+attribute in the data file.
+• [15 points] Verify data quality: Explain any missing values, duplicate data, and outliers.
+Are those mistakes? How do you deal with these problems? Be specific.
+• [10 points] Give simple, appropriate statistics (range, mode, mean, median, variance,
+counts, etc.) for the most important attributes and describe what they mean or if you
+found something interesting. Note: You can also use data from other sources for
+comparison. Explain the significance of the statistics run and why they are meaningful.
+• [15 points] Visualize the most important attributes appropriately (at least 5 attributes).
+Important: Provide an interpretation for each chart. Explain for each attribute why the
+chosen visualization is appropriate.
+• [15 points] Explore relationships between attributes: Look at the attributes via scatter
+plots, correlation, cross-tabulation, group-wise averages, etc. as appropriate. Explain
+any interesting relationships.
+• [10 points] Identify and explain interesting relationships between features and the class
+you are trying to predict (i.e., relationships with variables and the target classification).
+• [5 points] Are there other features that could be added to the data or created from
+existing features? Which ones?
+• Exceptional Work (10 points total)
+• You have free reign to provide additional analyses.
+• One idea: implement dimensionality reduction, then visualize and interpret the results.
+
+

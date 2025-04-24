@@ -47,3 +47,501 @@ SKILLS
 •	Data Visualization & Web Dev: Tableau, PowerBI, Processing, P5.js, D3.js, Three.js, Excel, JavaScript, React, Dashboards, ggplot2
 •	Cloud, DevOps & Deployment: AWS (EC2, S3), GitHub, Docker, Google Cloud, Microsoft Azure
 •	IT & Support: Windows & macOS Administration, Microsoft Office and 365, Network Security, Multi-Factor Authentication, Active Directory, Communication and Customer Service
+
+
+
+
+
+
+
+
+Previous Version
+Christian Castro
+Dallas, TX | (504) 215-6527 | cdcastro@smu.edu | linkedin.com/in/christiancastr | cdcastr0.github.io
+EXPERIENCE
+Formula SAE – Electrical Team Lead
+Hilltop Motorsports	 
+Aug 2019–May 2023 
+•	Led effort to design and build custom wiring harnesses for Peruna III & IV cars, learning circuit design 
+•	Worked cross-functionally with students of varying technical backgrounds to meet technical needs
+•	Presented work to head of body dynamics at Tesla in competition and received acknowledgement for design and execution
+Campus Minister – Part-Time 
+Cru	
+Aug 2023–Present 
+•	Led a team of 12 to North Africa for over a month, managing a $70,000 budget and coordinated logistics of trip Summer 2023. Led another team of 12 for 10 days as the sole leader January 2025
+•	Developed financial oversight strategies and contingency planning for an unpredictable environment
+•	Gained skills in cross-cultural communication and interpersonal relationship building as well as fundraising and financial development skills.
+IT Help Desk – Team Lead                                                                                                                                                             
+Southern Methodist University                                                                                                                                        Aug 2019 – May 2024
+•	Computer Imaging (Aug 2019 – Nov 2020) Oversaw system imaging, software deployment, and device management across campus. Assisted with automation of software installations and network configuration.
+•	Help Desk Team Lead (Dec 2020 – May 2024) Managed IT support operations resolving issues pertaining to software, hardware, and networking. Developed and maintained knowledge bases and documentation for troubleshooting. Helped with system administration, receiving experience in Active Directory and authentication security using Duo Mobile. 
+NIT Consulting – Data Scientist                                                                                                               
+•	Frito-Lay Employee Attrition Analysis
+o	Developed machine learning models (Random Forest and Logistic Regression) to predict attrition 
+o	Created models to identify key indicators influencing and produced a course of action to remedy it
+•	Century21 Real Estate Analytics
+o	Build a predictive model to identify profitable home features.
+o	Analysed market trends to provide insight for pricing strategies across different neighborhoods
+•	Anheuser-Busch Case Study
+o	Analyzed data on beers and breweries to gain an understanding of the testes of different regions and potential market gaps to fill
+•	Airbnb Paris Housing Study
+o	Created various prediction models to analyze features like bedroom count, bathroom count, geographical distance from landmarks, in order to predict which Arondissement each listing is in as well as the competitive market rate
+o	Used GIS to analyze location data and determine distance from well-known features of Paris
+EDUCATION
+Southern Methodist University
+Master of Science in Data Science | GPA: 3.7/4.0 	Dallas, TX
+December 2025
+Southern Methodist University
+Bachelor of Arts in Religious Studies (Comparative Religion, Christian Tradition)	Dallas, TX
+August 2023
+SKILLS
+•	Programming Languages: Python, R, Java, C++, JavaScript, SQL, SAS, HTML, JSON
+•	Machine Learning & AI: Scikit-Learn, TensorFlow, Keras, Pandas, NLTK, PyTorch, Regression, Clustering, Decision Trees, Neural Networks 
+•	Database Management: SQL, NoSQL, MySQL, MongoDB
+•	Data Visualization & Web Dev: Tableau, PowerBI, Processing, P5.js, D3.js, Three.js, Excel, JavaScript, React
+•	Cloud & DevOps: AWS (EC2, S3), GitHub, Docker, Google Cloud, Microsoft Azure
+•	IT & Support: Windows & macOS Administration, Network Security, Multi-Factor Authentication, Active Directory, Communication and Customer Service
+
+
+
+Another Previous Version
+
+	Christian Castro
+cdcastro@smu.edu • 504 - 215 – 6527 • 5236 Hearst St • Metairie, LA 70001 • www.linkedin.com/in/christiancastr 
+
+EDUCATION:	Southern Methodist University 								           Dallas, TX 		Dedman College of Humanities & Sciences    			    		    Grad Date:  May 2023
+Bachelor of Art in Religious Studies		             				             	           
+Concentration in Christian Tradition
+Southern Methodist University								           Dallas, TX
+		Moody Graduate School						        Grad Date:       August 2025
+Master’s in Data Science						        
+
+RELEVANT	Introduction to Electrical Engineering, Principles of Computer Science I (Java), Principles of Computer COURSES:          Science II (C++), Calculus I, Calculus II, Physics: Mechanics, Physics: Electricity & Magnetism, Statistics for Data Science, Applied Statistics, Visualizations, File Organization and Databases, 	
+
+SKILLS:	Familiar with Autocad, proficiency in Java, proficiency in C++, familiar using Microsoft suite, general troubleshooting, communication and conflict management, writing 
+
+PROJECTS:
+Theta Tau Risk Management							            August 2020 – May 2021
+●	Involved in decision making regarding having a strategy to overcome hazards and issues during a pandemic
+Theta Tau Community Service	 						August 2021 – Spring 2022
+•	Coordinated community service events for our chapter to serve the Dallas community
+Formula SAE car								                              August 2019 - Present
+●	Led a team comprised of Electrical Engineering and Computer science students to rewire Formula Student Car
+●	Coordinated schedules and timelines in order to meet deadlines
+●	Was the primary labor for rebuilding the wiring harness for Peruna III and designed harness for future Peruna IV car
+EXPERIENCE: 
+Southern Methodist University Office of Information Technology, Computer Imaging, Dallas, TX
+	Student Worker Team Lead                                                                                                August 2020 – November 2020
+●	Reloaded computers for the University’s use
+●	Gained experience in technical aspects of Microsoft Windows and MacOS 
+●	Collaborated with both student workers and University staff to maintain University functions
+●	Learned problem solving and troubleshooting in a  professional context
+Southern Methodist University Office of Information Technology, Help Desk, Dallas, TX
+	Student Worker Team Lead                                                                                                         December 2020 – Present
+●	Led student employee customer service team
+●	Improved my own troubleshooting skills alongside quick thinking in order to resolve issues
+●	Learned more about how to deal with ticket-based systems and backend organization 
+●	Became familiar with network configuration involving security certificates
+
+EXPERIENCE: 
+Theta Tau Engineering Fraternity, Member							Spring 2020 - Present
+Rush Chair Fall 2020
+Risk Management Fall 2020 – Spring 2021
+Community Service Chair Fall 2021 – Spring 2022
+SMU Mustang Band, Trombone, Member, leadership 2022-2023			                Fall 2019 – May 2023
+Formula Society of Automotive Engineers (FSAE), Member 				                Fall 2019 - Present
+Electrical Team Lead Fall 2020 – 2023
+Secretary Fall 2021 – Spring 2022							
+SMU Mustang Mavericks								          Spring 2020 – Present
+CRU (Campus Ministry)								               Fall 2019 – Present
+Leadership team Spring 2022 – May 2023
+Volunteer Staff August 2023 – May 2024
+Part-time staff August 2024 - Present
+
+
+Another previous version
+
+Christian Castro
+cdcastro@smu.edu • 504 - 215 – 6527 • 5236 Hearst St • Metairie, LA 70001 • www.linkedin.com/in/christiancastr
+EDUCATION: Southern Methodist University Dallas, TX
+ Dedman College of Humanities & Sciences Grad Date: May 2023
+Bachelor of Art in Religious Studies
+Concentration in Christian Tradition
+Southern Methodist University Dallas, TX
+ Moody Graduate School Grad Date: August 2025
+Master’s in Data Science
+RELEVANT Introduction to Electrical Engineering, Principles of Computer Science I (Java), Principles of Computer
+COURSES: Science II (C++), Calculus I, Calculus II, Physics: Mechanics, Physics: Electricity & Magnetism, Statistics for
+Data Science, Applied Statistics, Visualizations, File Organization and Databases,
+SKILLS: Familiar with Autocad, proficiency in Java, proficiency in C++, familiar using Microsoft suite, general
+troubleshooting, communication and conflict management, writing
+PROJECTS:
+Theta Tau Risk Management August 2020 – May 2021
+● Involved in decision making regarding having a strategy to overcome hazards and issues during a pandemic
+Theta Tau Community Service August 2021 – Spring 2022
+ Coordinated community service events for our chapter to serve the Dallas community
+Formula SAE car August 2019 - Present
+● Led a team comprised of Electrical Engineering and Computer science students to rewire Formula Student Car
+● Coordinated schedules and timelines in order to meet deadlines
+● Was the primary labor for rebuilding the wiring harness for Peruna III and designed harness for future Peruna
+IV car
+EXPERIENCE:
+Southern Methodist University Office of Information Technology, Computer Imaging, Dallas, TX
+ Student Worker Team Lead August 2020 – November 2020
+● Reloaded computers for the University’s use
+● Gained experience in technical aspects of Microsoft Windows and MacOS
+● Collaborated with both student workers and University staff to maintain University functions
+● Learned problem solving and troubleshooting in a professional context
+Southern Methodist University Office of Information Technology, Help Desk, Dallas, TX
+ Student Worker Team Lead December 2020 – Present
+● Led student employee customer service team
+● Improved my own troubleshooting skills alongside quick thinking in order to resolve issues
+● Learned more about how to deal with ticket-based systems and backend organization
+● Became familiar with network configuration involving security certificates
+●
+EXPERIENCE:
+Theta Tau Engineering Fraternity, Member Spring 2020 - Present
+Rush Chair Fall 2020
+ Risk Management Fall 2020 – Spring 2021
+ Community Service Chair Fall 2021 – Spring 2022
+SMU Mustang Band, Trombone, Member Fall 2019 - Present
+Formula Society of Automotive Engineers (FSAE), Member Fall 2019 - Present
+ Electrical Team Lead Fall 2020 – Present
+ Secretary Fall 2021 – Spring 2022
+Watermark Community Church Fall 2019 – Present
+SMU Mustang Mavericks Spring 2020 – Present
+CRU (Campus Ministry) Fall 2019 – Present
+ Leadership team Spring 2022 - Present 
+
+Another Previous Version
+
+Christian Castro
+cdcastro@smu.edu • 504 - 215 – 6527 • 5236 Hearst St • Metairie, LA 70001 • www.linkedin.com/in/christiancastr
+EDUCATION: Southern Methodist University Dallas, TX
+Dedman College of Humanities & Sciences Grad Date: May 2023
+Bachelor of Art in Religious Studies
+Concentration in Christian Tradition
+Southern Methodist University Dallas, TX
+Dedman College of Humanities & Sciences Grad Date: Dec 2025
+Master’s of Science in Data Science
+SKILLS: Java, C++, DB Browser for SQLite, RapidMiner Studio, R, SAS, Python, AutoCAD, Microsoft Suite, writing,
+troubleshooting, training, communication, and conflict management
+PROJECTS:
+Theta Tau Risk Management August 2020 – May 2021
+● Involved in decision making regarding having a strategy to overcome hazards and issues during a pandemic
+● Encouraged and executed safe practices in accordance with university policy to retain brotherhood in a time
+where contact was limited
+Theta Tau Community Service August 2021 – Spring 2022
+● Coordinated community service events for our chapter to serve the Dallas community
+● Managed data ensuring that chapter met national service requirements
+Formula SAE car August 2019 - May 2023
+● Led a team comprised of Electrical Engineering and Computer science students to rewire Formula Student Car
+● Collaborated with others by coordinating schedules in order to meet deadlines
+● Was the primary labor for rebuilding the wiring harness for Peruna III and designed harness for future Peruna
+IV car
+● Designed and assembled Peruna IV’s wiring harness from scratch
+EXPERIENCE:
+Southern Methodist University Office of Information Technology, Help Desk, Dallas, TX
+Student Worker Team Lead December 2020 – Present
+● Dealt with customer service and answering questions related to technology
+● Improved my own troubleshooting skills alongside quick thinking in order to resolve issues
+● Learned more about how to deal with ticket-based systems and backend organization
+● Gained familiarity with configuration and administration of a variety of OS
+● Became familiar with network configuration involving security certificates
+● Troubleshooted issues with Multi-factor authentication
+● Built problem solving skills in many research and industry software
+Southern Methodist University Office of Information Technology, Computer Imaging, Dallas, TX
+Student Worker Team Lead August 2020 – November 2020
+● Reloaded computers for the University’s use
+● Gained experience in technical aspects of Microsoft Windows and MacOS
+● Collaborated with both student workers and University staff to maintain University functions
+● Learned problem solving and troubleshooting in a professional context
+EXPERIENCE:
+Theta Tau Engineering Fraternity, Member Spring 2020 - May 2023
+Rush Chair Fall 2020
+Risk Management Fall 2020 – Spring 2021
+Community Service Chair Fall 2021 – Spring 2022
+SMU Mustang Band, Trombone, Member Fall 2019 - May 2023
+Formula Society of Automotive Engineers (FSAE), Member Fall 2019 - May 2023
+Electrical Team Lead Fall 2020 – Present
+Secretary Fall 2021 – Spring 2022
+SMU Mustang Mavericks Spring 2020 – May 2023
+CRU (Campus Ministry) Fall 2019 – Present
+Leadership team Spring 2022 - Spring 2023
+Volunteer Staff Fall 2023 - present
+
+Another Previous Version
+
+CHRISTIAN CASTRO
+Dallas, TX 75205
+504 - 215 – 6527
+cdcastro@smu.edu
+Highly-motivated employee with desire to take on new challenges. Strong worth ethic, adaptability and exceptional
+interpersonal skills. Adept at working effectively unsupervised and quickly mastering new skills. I pride myself in being
+a versatile worker with a diverse background that lends itself useful to quick learning and efficient problem-solving. In
+my free time I've taken a great interest in the finance industry and learned market mechanics and fundamentals on my
+own. I am seeking an opportunity that will allow me to learn and grow. I offer excellent technical abilities with software
+and applications, ability to handle challenging work, and excellent time management skills. Always willing and able to
+learn at a fast pace.
+Spreadsheet Tracking
+Materials and Service Cost Estimates
+Microsoft Windows and Office
+Verbal and Written Communication
+Multitasking and Prioritization
+Tracking and Documentation
+Technical Troubleshooting
+Customer Service Support
+Team Collaboration
+Client Relations
+Administrative Support
+Problem-Solving
+Analytical Thinking
+Event Organization and Budget Management
+12/2020 to Current
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX
+Help Desk Team Lead
+Trained new employees on support processes, procedures and knowledge base.
+Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+Researched issues on various computer systems and databases to determine resolutions to problems and answer
+inquiries.
+Worked with customer service supervisors to resolve customer concerns on daily basis.
+Developed online documentation for common processes for both support staff and end-users.
+08/2020 to Current
+HILLTOP MOTORSPORTS FORMULA STUDENT
+Dallas, TX
+Electrical Team Lead
+Led a team of computer science students and electrical engineers to meet deadlines and troubleshoot multiple
+vehicles.
+Designed and manufactured a bespoke wiring harness for the car integrating diagnostic tools and safety devices
+into a standalone engine electronic control unit.
+Tested electrical systems and circuit continuity using ohmmeters, voltmeters, or oscilloscopes.
+Diagnosed and repaired malfunctioning wiring.
+08/2019 to 11/2020
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX
+Computer Imaging Team Lead
+Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+Formatted and installed software for university machines.
+Worked closely with administrative staff to troubleshoot software issues and participate in hardware projects.
+Learned skills related to the administration of Windows and MacOS.
+BACHELOR OF ART: RELIGIOUS STUDIES, CHRISTIAN TRADITION Expected in 05/2023
+SUMMARY
+SKILLS
+EXPERIENCE
+EDUCATION AND TRAINING
+SCHEDULE INTERVIEW RESUME RECEIVED
+Southern Methodist University, Dedman College of Humanities & Sciences, Dallas, TX
+Mustang Band Scholarship Recipient
+Second Century Scholar Recipient
+Additional Coursework in Computer Science
+Additional Coursework in Data Science
+Additional Coursework in Economics
+Additional Coursework in Electrical Engineering
+Member of Theta Tau Professional Engineering Fraternity, 2020
+Student Leader with Cru
+
+Another Previous Version
+
+CHRISTIAN CASTRO
+Dallas, TX 75205
+504 - 215 – 6527
+cdcastro@smu.edu
+I am highly motivated to take on new challenges. I pride myself in my strong work ethic, adaptability, and exceptional
+interpersonal skills. I am adept at working effectively unsupervised and quickly mastering new skills and processes. My
+versatility and diverse background come together in efficient problem-solving. In my free time I have taken a great
+interest in finance and self-taught market mechanics and company fundamentals on my own. I am seeking an
+opportunity that will allow me to learn and grow. I offer excellent technical abilities with software and its applications,
+excellent time management skills, and excellency handling challenging work. I am always willing to learn and do so at a
+rapid pace.
+Learning
+Problem-Solving
+Analytical Thinking
+Troubleshooting
+Verbal and Written Communication
+Client Relations
+Customer Service Support
+Data Analysis using spreadsheets
+Materials and Service Cost Estimates
+Microsoft Windows and Office
+Multitasking and Prioritization
+Event Organization and Budget Management
+01/2023 to Current
+CRU
+Dallas, TX
+Operations Team Leader
+Managed a budget of just under $70,000.
+Organized a trip for 12 people to Africa.
+Coordinated logistics including contract flights and lodging.
+12/2020 to Current
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX
+Help Desk Team Lead
+Trained new employees on support processes, procedures and knowledge base.
+Resolved software and hardware issues and worked with service providers to facilitate repairs for end users.
+Worked with customers to solve experienced issues and built strong relationships with the campus community.
+Developed online documentation for common processes for both support staff and end-users.
+Have experience in Active Directory and Citrix systems.
+08/2020 to Current
+HILLTOP MOTORSPORTS FORMULA STUDENT
+Dallas, TX
+Electrical Team Lead
+Led a team of computer science students and electrical engineering students to meet deadlines.
+Designed and manufactured a wiring harness for the car integrating diagnostic tools and safety devices into a
+standalone engine electronic control unit.
+Gained experience using tools and manufacturing processes.
+08/2019 to 11/2020
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX
+Computer Imaging Team Lead
+Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+Formatted and installed software for university machines.
+Worked closely with administrative staff to troubleshoot software issues and participate in hardware projects.
+Learned skills related to the administration of Windows and MacOS.
+SUMMARY
+SKILLS
+EXPERIENCE
+SCHEDULE INTERVIEW RESUME RECEIVED
+BACHELOR OF ART: RELIGIOUS STUDIES, CHRISTIAN TRADITION Expected in 05/2023
+Southern Methodist University, Dedman College of Humanities & Sciences, Dallas, TX
+Second Century Scholar Recipient
+Mustang Band Scholarship Recipient
+Additional Coursework in Computer Science
+Additional Coursework in Data Science
+Additional Coursework in Economics
+Additional Coursework in Electrical Engineering
+Member of Theta Tau Professional Engineering Fraternity, 2020
+Student Leader with Cru
+EDUCATION AND SCHOLARSHIPS
+
+
+Another Previous Version
+
+CHRISTIAN CASTRO
+Dallas, TX 75205
+504 - 215 – 6527
+cdcastro@smu.edu
+Highly-motivated employee with desire to take on new challenges. Strong worth ethic, adaptability and exceptional
+interpersonal skills. Adept at working effectively unsupervised and quickly mastering new skills. I pride myself in being
+a versatile worker with a diverse background that lends itself useful to quick learning and efficient problem-solving. In
+my free time I've taken a great interest in the finance industry and learned market mechanics and fundamentals on my
+own. I am seeking an opportunity that will allow me to learn and grow. I offer excellent technical abilities with software
+and applications, ability to handle challenging work, and excellent time management skills. Always willing and able to
+learn at a fast pace.
+Spreadsheet Tracking
+Materials and Service Cost Estimates
+Microsoft Windows and Office
+Verbal and Written Communication
+Multitasking and Prioritization
+Tracking and Documentation
+Technical Troubleshooting
+Customer Service Support
+Team Collaboration
+Client Relations
+Administrative Support
+Problem-Solving
+Analytical Thinking
+Event Organization and Budget Management
+12/2020 to Current
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX
+Help Desk Team Lead
+Trained new employees on support processes, procedures and knowledge base.
+Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+Researched issues on various computer systems and databases to determine resolutions to problems and answer
+inquiries.
+Worked with customer service supervisors to resolve customer concerns on daily basis.
+Developed online documentation for common processes for both support staff and end-users.
+08/2020 to Current
+HILLTOP MOTORSPORTS FORMULA STUDENT
+Dallas, TX
+Electrical Team Lead
+Led a team of computer science students and electrical engineers to meet deadlines and troubleshoot multiple
+vehicles.
+Designed and manufactured a bespoke wiring harness for the car integrating diagnostic tools and safety devices
+into a standalone engine electronic control unit.
+Tested electrical systems and circuit continuity using ohmmeters, voltmeters, or oscilloscopes.
+Diagnosed and repaired malfunctioning wiring.
+08/2019 to 11/2020
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX
+Computer Imaging Team Lead
+Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+Formatted and installed software for university machines.
+Worked closely with administrative staff to troubleshoot software issues and participate in hardware projects.
+Learned skills related to the administration of Windows and MacOS.
+BACHELOR OF ART: RELIGIOUS STUDIES, CHRISTIAN TRADITION Expected in 05/2023
+SUMMARY
+SKILLS
+EXPERIENCE
+EDUCATION AND TRAINING
+SCHEDULE INTERVIEW RESUME RECEIVED
+Southern Methodist University, Dedman College of Humanities & Sciences, Dallas, TX
+Mustang Band Scholarship Recipient
+Second Century Scholar Recipient
+Additional Coursework in Computer Science
+Additional Coursework in Data Science
+Additional Coursework in Economics
+Additional Coursework in Electrical Engineering
+Member of Theta Tau Professional Engineering Fraternity, 2020
+Student Leader with Cru
+
+Another Previous Version
+
+CHRISTIAN CASTRO
+
+ 
+Dallas, TX 75205
+504 - 215 – 6527
+cdcastro@smu.edu
+ 	   SUMMARY   	
+Highly-motivated employee with desire to take on new challenges. Strong worth ethic, adaptability and exceptional interpersonal skills. Adept at working effectively unsupervised and quickly mastering new skills. I pride myself in being a versatile worker with a diverse background that lends itself useful to quick learning and efficient problem-solving. In my free time I've taken a great interest in the finance industry and learned market mechanics and fundamentals on my own. I am seeking an opportunity that will allow me to learn and grow. I offer excellent technical abilities with software and applications, ability to handle challenging work, and excellent time management skills. Always willing and able to learn at a fast pace.
+ 	   SKILLS   	
+•	Spreadsheet Tracking
+•	Materials and Service Cost Estimates
+•	Microsoft Windows and Office
+•	Verbal and Written Communication
+•	Multitasking and Prioritization
+•	Tracking and Documentation
+•	Technical Troubleshooting	•	Customer Service Support
+•	Team Collaboration
+•	Client Relations
+•	Administrative Support
+•	Problem-Solving
+•	Analytical Thinking
+•	Event Organization and Budget Management
+ 	   EXPERIENCE   	
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX 
+Help Desk Team Lead 	 12/2020 to Current 
+•	Trained new employees on support processes, procedures and knowledge base.
+•	Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+•	Researched issues on various computer systems and databases to determine resolutions to problems and answer inquiries.
+•	Worked with customer service supervisors to resolve customer concerns on daily basis.
+•	Developed online documentation for common processes for both support staff and end-users.
+HILLTOP MOTORSPORTS FORMULA STUDENT
+Dallas, TX 
+Electrical Team Lead 	 08/2020 to Current 
+•	Led a team of computer science students and electrical engineers to meet deadlines and troubleshoot multiple vehicles.
+•	Designed and manufactured a bespoke wiring harness for the car integrating diagnostic tools and safety devices into a standalone engine electronic control unit.
+•	Tested electrical systems and circuit continuity using ohmmeters, voltmeters, or oscilloscopes.
+•	Diagnosed and repaired malfunctioning wiring.
+SOUTHERN METHODIST UNIVERSITY OIT
+Dallas, TX 
+Computer Imaging Team Lead 	 08/2019 to 11/2020 
+•	Troubleshot hardware issues and worked with service providers to facilitate repairs for end users.
+•	Formatted and installed software for university machines.
+•	Worked closely with administrative staff to troubleshoot software issues and participate in hardware projects.
+•	Learned skills related to the administration of Windows and MacOS.
+ 	   EDUCATION AND TRAINING   	
+Bachelor of Art: Religious Studies, Christian Tradition 	 Expected in 05/2023 
+Southern Methodist University, Dedman College of Humanities & Sciences, Dallas, TX 
+•	Mustang Band Scholarship Recipient
+•	Second Century Scholar Recipient
+•	Additional Coursework in Computer Science
+•	Additional Coursework in Data Science
+•	Additional Coursework in Economics
+•	Additional Coursework in Electrical Engineering
+•	Member of Theta Tau Professional Engineering Fraternity, 2020
+•	Student Leader with Cru
+

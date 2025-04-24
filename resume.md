@@ -1,6 +1,6 @@
 # Christian Castro
 
-[← Back to Main Page](https://cdcastr0.github.io)
+[← Back to Home](https://cdcastr0.github.io)
 
 ## Contact Information
 - **Email:** [cdcastro@smu.edu](mailto:cdcastro@smu.edu)
@@ -14,7 +14,12 @@
 
 ### Southern Methodist University
 - **Master of Science in Data Science** | GPA: 3.7 _(Expected December 2025)_
+  
+  **Relevant Coursework:** Statistics for Data Science, Applied Statistics, Data Visualization, File Organization and Databases, Machine Learning, Data Mining, Natural Language Processing
+
 - **Bachelor of Arts in Religious Studies** | Comparative Religion, Christian Tradition _(August 2023)_
+
+  **Additional Coursework:** Introduction to Electrical Engineering, Principles of Computer Science I (Java), Principles of Computer Science II (C++), Calculus I & II, Physics: Mechanics, Physics: Electricity & Magnetism
 
 ## Professional Experience
 
@@ -44,27 +49,51 @@
   - Managed IT support operations resolving software, hardware, and networking issues
   - Developed and maintained knowledge bases and troubleshooting documentation
   - Gained experience with Active Directory and authentication security using Duo Mobile
-  - Served as full-time tier 2 Help Desk staff during all-hands meetings
+  - Led student employee customer service team
+  - Worked with ticket-based systems and network configuration involving security certificates
 
 - **Computer Imaging Specialist** _(August 2019 - November 2020)_
   - Oversaw system imaging, software deployment, and device management across campus
   - Assisted with automation of software installations and network configuration
+  - Collaborated with both student workers and University staff to maintain University functions
+  - Gained experience in technical aspects of Microsoft Windows and MacOS
 
 ### Campus Minister (Part-Time)
 **Cru** | _August 2023 - Present_
 
 - Managed a $70,000 budget and coordinated logistics for a team of 12 to North Africa for 5 weeks in Summer 2023
-- Led a team of 12 to North Africa for 10 days, managing all finances and logistics in January 2025
+- Solely led a team of 12 to North Africa for 10 days, managing all finances and logistics in January 2025
 - Developed financial strategies and contingency planning for unpredictable environments
 - Gained skills in cross-cultural communication and interpersonal relationship building
 - Raised personal support package, developing fundraising and financial development skills
+- Previously served on Cru leadership team (Spring 2022 - May 2023) and as volunteer staff (August 2023 - May 2024)
 
 ### Electrical Team Lead
 **Hilltop Motorsports Formula SAE** | _August 2019 - May 2023_
 
 - Received design and execution acknowledgment from head of body dynamics at Tesla in a competitive presentation
-- Led effort to design and build custom wiring harnesses for Peruna III & IV cars, learning circuit design
+- Led effort to design and build custom wiring harnesses for Peruna III & IV cars
+- Designed and assembled Peruna IV's wiring harness from scratch
+- Coordinated schedules and timelines in order to meet deadlines
 - Worked cross-functionally with students of varying technical backgrounds to meet technical needs
+- Also served as Secretary for the organization (Fall 2021 - Spring 2022)
+
+## Leadership & Campus Involvement
+
+### Theta Tau Engineering Fraternity
+**Member** | _Spring 2020 - May 2023_
+- **Risk Management Chair** _(Fall 2020 - Spring 2021)_: Developed strategies for hazard mitigation during the pandemic
+- **Community Service Chair** _(Fall 2021 - Spring 2022)_: Coordinated service events for the Dallas community
+- **Rush Chair** _(Fall 2020)_: Organized and led recruitment activities
+
+### SMU Mustang Band
+**Trombone Player** | _Fall 2019 - May 2023_
+- Held leadership position in 2022-2023
+- Performed at university athletic events and community functions
+
+### SMU Mustang Mavericks
+**Member** | _Spring 2020 - May 2023_
+- Participated in student spirit organization supporting athletic events
 
 ## Technical Skills
 
@@ -109,4 +138,4 @@ Developed regression models for the Kaggle Ames Housing competition and built an
 
 ---
 
-[← Back to Main Page](https://cdcastr0.github.io) | [Download PDF Resume](https://cdcastr0.github.io/assets/files/Christian.Castro.pdf) 
+[← Back to Home](https://cdcastr0.github.io) | [Download PDF Resume](https://cdcastr0.github.io/assets/files/Christian.Castro.pdf) 

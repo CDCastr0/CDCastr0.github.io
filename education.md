@@ -8,13 +8,13 @@
 **Expected Graduation:** December 2025 | **GPA:** 3.7
 
 #### Key Coursework:
-- Machine Learning
-- Statistical Analysis
-- Data Mining
-- Database Management
-- Artificial Intelligence
-- Natural Language Processing
+- Statistics for Data Science
+- Applied Statistics
 - Data Visualization
+- File Organization and Databases
+- Machine Learning
+- Data Mining
+- Natural Language Processing
 - Research Design & Analysis
 
 #### Projects:
@@ -30,6 +30,14 @@
 - Christian Tradition
 - Religion in Contemporary Society
 - Ethics and Philosophy
+
+#### Additional Coursework:
+- Introduction to Electrical Engineering
+- Principles of Computer Science I (Java)
+- Principles of Computer Science II (C++)
+- Calculus I & II
+- Physics: Mechanics
+- Physics: Electricity & Magnetism
 
 #### Skills Developed:
 - Critical thinking and analysis
