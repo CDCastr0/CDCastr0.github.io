@@ -3,34 +3,34 @@
 :root {
   /* Light theme (default) */
   --bg-color: #ffffff;
-  --text-color: #333333;
-  --heading-color: #222222;
+  --text-color: #24292e;
+  --heading-color: #24292e;
   --link-color: #0366d6;
   --link-hover-color: #044289;
   --nav-bg: #f8f9fa;
-  --border-color: #dddddd;
+  --border-color: #e1e4e8;
   --code-bg: #f6f8fa;
   --blockquote-border: #dfe2e5;
   --button-bg: #f4f4f4;
-  --button-text: #333333;
+  --button-text: #24292e;
   --card-bg: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* Dark theme */
 [data-theme="dark"] {
-  --bg-color: #1e1e2e;
-  --text-color: #e0e0e0;
-  --heading-color: #ffffff;
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --heading-color: #e6edf3;
   --link-color: #58a6ff;
   --link-hover-color: #79c0ff;
-  --nav-bg: #252535;
-  --border-color: #444444;
-  --code-bg: #2d2d3d;
-  --blockquote-border: #4d4d5d;
-  --button-bg: #363646;
-  --button-text: #e0e0e0;
-  --card-bg: #252535;
+  --nav-bg: #161b22;
+  --border-color: #30363d;
+  --code-bg: #1f2937;
+  --blockquote-border: #3b434b;
+  --button-bg: #21262d;
+  --button-text: #c9d1d9;
+  --card-bg: #161b22;
   --card-shadow: rgba(0, 0, 0, 0.3);
 }
 
@@ -39,30 +39,54 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 a {
   color: var(--link-color);
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 code, pre {
   background-color: var(--code-bg);
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 85%;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 16px;
+  overflow: auto;
+  line-height: 1.45;
 }
 
 blockquote {
-  border-left: 4px solid var(--blockquote-border);
+  padding: 0 1em;
+  color: var(--text-color);
+  border-left: 0.25em solid var(--blockquote-border);
+  margin: 0 0 16px 0;
 }
 
 hr {
-  border-color: var(--border-color);
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--border-color);
+  border: 0;
 }
 
 /* Theme toggle button */
@@ -84,13 +108,15 @@ hr {
   z-index: 1000;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 2px 5px var(--card-shadow);
+  opacity: 0.9;
 }
 
 #theme-toggle:hover {
   transform: scale(1.05);
+  opacity: 1;
 }
 
-/* Animation for theme transition */
-* {
+/* Only apply transitions to the theme-related properties */
+body, a, h1, h2, h3, h4, h5, h6, code, pre, blockquote, hr, #theme-toggle {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 } 

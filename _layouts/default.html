@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Christian Castro - Data Scientist</title>
-  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% if site.theme %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% seo %}
 </head>
 <body>
@@ -16,7 +16,7 @@
     <span id="theme-toggle-icon">🌙</span>
   </button>
 
-  <div class="container-lg px-3 my-5 markdown-body">
+  <div class="container markdown-body">
     {{ content }}
   </div>
 

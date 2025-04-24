@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="navigation-links">
+<nav class="navigation-links">
   <a href="#about-me">About Me</a>
   <a href="https://cdcastr0.github.io/education">Education</a>
   <a href="https://cdcastr0.github.io/skills">Skills & Expertise</a>
@@ -17,7 +17,7 @@
   <a href="https://cdcastr0.github.io/interests">Personal Interests</a>
   <a href="#contact">Contact</a>
   <a href="https://cdcastr0.github.io/resume">Resume</a>
-</div>
+</nav>
 
 ## About Me
 
