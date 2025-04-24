@@ -20,9 +20,25 @@
 - [Project Demo](#project-demo)
 - [Impact and Applications](#impact-and-applications)
 - [Future Development](#future-development)
+- [BabelBridge Platform Details](#babelbridge-platform)
 
 ## Project Overview
 This project focuses on building an application to overcome language barriers using AI technology. By leveraging machine learning and natural language processing, I developed a tool that provides realistic-voice translations of YouTube videos, making content accessible across different languages.
+
+## BabelBridge Platform
+**[View Complete BabelBridge Technical Documentation](BabelBridge.md)**
+
+BabelBridge is the comprehensive AI-powered video translation platform developed as part of this project. It automates the process of translating video content across multiple languages, leveraging OpenAI's speech recognition, translation, and text-to-speech capabilities.
+
+### Key Features
+- **Multi-language Support**: Translates content into 20+ languages including Spanish, Chinese, Arabic, French, German, Japanese, and more
+- **High-Quality Voice Generation**: Natural-sounding speech using OpenAI's TTS technology
+- **YouTube Integration**: Direct processing of YouTube videos by URL
+- **Real-time Progress Tracking**: WebSocket-based updates on translation progress
+
+For detailed technical implementation, architecture, and full capabilities, [view the complete BabelBridge documentation](BabelBridge.md).
+
+[View the GitHub Repository](https://github.com/CDCastr0/BabelBridge)
 
 ## Key Features
 - **Real-time Translation**: Converts spoken language in videos to text and translates it to target languages
@@ -31,7 +47,7 @@ This project focuses on building an application to overcome language barriers us
 - **User-friendly Interface**: Simple design that makes translation accessible to users of all technical backgrounds
 
 ## Technologies Used
-- **AI Development Tools**: Cursor, ChatGPT, other MCP (Multi-agent Collaboration Platform) tools
+- **AI Development Tools**: Cursor, ChatGPT, other MCP (Multiple Context Protocol) tools
 - **Speech Recognition**: Advanced ML models for accurate speech-to-text conversion
 - **Natural Language Processing**: State-of-the-art translation algorithms
 - **Voice Synthesis**: Neural network models for generating natural-sounding speech
