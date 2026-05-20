@@ -34,7 +34,7 @@ I'm proficient in multiple programming languages with varying degrees of experti
   - Clustering (K-Means, Hierarchical, DBSCAN)
   - Natural Language Processing (NLU/NLG)
   - Deep Learning (CNN, RNN, Transformers)
-- **Generative AI**: Large Language Models, OpenAI APIs, Groq, HuggingFace
+- **Generative AI**: Large Language Models, OpenAI APIs, ChatGPT, OpenAI Codex, Claude API (Anthropic), OpenClaw, LM Studio, Groq, HuggingFace
 
 ## Data Science & Analysis
 
@@ -53,7 +53,7 @@ I'm proficient in multiple programming languages with varying degrees of experti
 
 ## Data Visualization & Presentation
 
-- **Tools**: Tableau, Power BI, ggplot2, Matplotlib, Seaborn
+- **Tools**: Tableau, Power BI, Excel, ggplot2, Matplotlib, Seaborn
 - **Web Visualization**: D3.js, Three.js, P5.js, Processing
 - **Dashboard Development**: Interactive data dashboards for business intelligence
 - **Communication**: Translating technical results for non-technical stakeholders

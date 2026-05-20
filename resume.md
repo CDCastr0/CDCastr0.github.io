@@ -34,27 +34,29 @@
 
 ## Professional Experience
 
-### Data Scientist
-**NIT Consulting** | _August 2023 - Present_
+### Data Scientist – Part-Time
+**Neighborhood Insights Technology** | _August 2025 - Present_
+
+- Market Research
+- Web Traffic Analytics
+- Advertisement Performance Analytics
 
 - **Frito-Lay Employee Attrition Analysis**
   - Developed machine learning models (Random Forest and Logistic Regression) to predict attrition
   - Created models to identify key indicators influencing attrition and produced actionable recommendations
 
 - **Century21 Real Estate Analytics**
-  - Built predictive models to identify profitable home features
+  - Assessed different predictive models for performance across real estate data
   - Analyzed market trends to provide insight for pricing strategies across different neighborhoods
 
 - **Anheuser-Busch Case Study**
-  - Analyzed data on beers and breweries to gain understanding of regional taste preferences
-  - Identified potential market gaps and opportunities for product development
+  - Performed complete analysis of a large dataset across features and provided creative strategies to fill market gaps
 
 - **Airbnb Paris Housing Study**
-  - Created prediction models to analyze features including room count and proximity to landmarks
-  - Used GIS to analyze location data and determine distance from well-known features of Paris
+  - Built predictive models to discern Arrondissement using real-estate features as well as integrated GIS data as a feature for references to landmarks
 
 ### IT Help Desk Team Lead
-**Southern Methodist University** | _August 2019 - May 2024_
+**Southern Methodist University** | _August 2019 - May 2025_
 
 - **Help Desk Team Lead** _(December 2020 - May 2024)_
   - Managed IT support operations resolving software, hardware, and networking issues
@@ -70,7 +72,7 @@
   - Gained experience in technical aspects of Microsoft Windows and MacOS
 
 ### Campus Minister (Part-Time)
-**Cru** | _August 2023 - Present_
+**Cru** | _August 2023 - August 2025_
 
 - Managed a $70,000 budget and coordinated logistics for a team of 12 to North Africa for 5 weeks in Summer 2023
 - Solely led a team of 12 to North Africa for 10 days, managing all finances and logistics in January 2025
@@ -112,7 +114,7 @@
 Python, R, Java, C++, JavaScript, TypeScript, SQL, SAS, HTML/CSS
 
 ### Machine Learning & AI
-scikit-learn, PyTorch, TensorFlow, Keras, pandas, numpy, NLTK, Optuna, GridSearchCV, Regression, Classification, Clustering, Neural Networks (CNN/RNN/MLP), Transfer Learning, Natural Language Processing, Large Language Models, OpenAI APIs, Claude API (Anthropic), HuggingFace, Generative AI
+scikit-learn, PyTorch, TensorFlow, Keras, pandas, numpy, NLTK, Optuna, GridSearchCV, Regression, Classification, Clustering, Neural Networks (CNN/RNN/MLP), Transfer Learning, Natural Language Processing, Large Language Models, OpenAI APIs, ChatGPT, OpenAI Codex, Claude API (Anthropic), OpenClaw, LM Studio, HuggingFace, Generative AI
 
 ### Data Science & Analytics
 Data wrangling, feature engineering, ETL pipelines, exploratory data analysis, statistical testing, model selection, hyperparameter tuning, cross-validation, time series analysis, Census/ACS data, geospatial analysis (OSM)
@@ -130,7 +132,7 @@ OpenAI API (GPT, Whisper, TTS), Anthropic Claude API, Stripe, Clerk, Resend, Cen
 Vercel, Cloudflare Pages, AWS (EC2, S3), GitHub Actions, Docker, Google Cloud, Microsoft Azure
 
 ### Data Visualization
-matplotlib, seaborn, ggplot2, Tableau, Power BI, D3.js, P5.js, Three.js
+matplotlib, seaborn, ggplot2, Tableau, Power BI, Excel, D3.js, P5.js, Three.js
 
 ### Developer Tools
 Git, GitHub, pytest, APScheduler, ReportLab, WeasyPrint, FFmpeg, RMarkdown, RShiny, Jupyter Notebooks, Typer (CLI), Cursor IDE

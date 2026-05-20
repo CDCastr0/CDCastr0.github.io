@@ -13,10 +13,12 @@
   <a href="https://cdcastr0.github.io/resume">Resume</a>
 </div>
 
-## Data Scientist
-**NIT Consulting** | _August 2023 - Present_
+## Data Scientist – Part-Time
+**Neighborhood Insights Technology** | _August 2025 - Present_
 
-As a Data Scientist at NIT Consulting, I provide data-driven solutions for clients across various industries. My responsibilities include:
+- Market Research
+- Web Traffic Analytics
+- Advertisement Performance Analytics
 
 ### Key Projects:
 
@@ -27,25 +29,23 @@ As a Data Scientist at NIT Consulting, I provide data-driven solutions for clien
 - Implemented feature importance analysis to prioritize retention strategies
 
 #### Century21 Real Estate Analytics
-- Built predictive models to identify profitable home features across markets
+- Assessed different predictive models for performance across real estate data
 - Analyzed regional market trends to provide data-driven pricing strategies
 - Developed interactive tools for real estate agents to optimize listing prices
 - Conducted time-series analysis of property value changes by neighborhood
 
 #### Anheuser-Busch Case Study
-- Analyzed data on beers and breweries to map regional taste preferences
-- Identified potential market gaps and opportunities for product development
+- Performed complete analysis of a large dataset across features and provided creative strategies to fill market gaps
 - Created comprehensive market analysis reports with actionable insights
 - Presented findings to stakeholders with clear business recommendations
 
 #### Airbnb Paris Housing Study
-- Created prediction models to analyze features like room count and proximity to landmarks
-- Used GIS to analyze location data and calculate distances from Paris landmarks
+- Built predictive models to discern Arrondissement using real-estate features as well as integrated GIS data as a feature for references to landmarks
 - Developed pricing strategy tools based on location and amenities
 - Visualized neighborhood pricing patterns to identify market opportunities
 
 ## IT Help Desk Team Lead
-**Southern Methodist University** | _August 2019 - May 2024_
+**Southern Methodist University** | _August 2019 - May 2025_
 
 Led IT support operations for campus-wide technology services, supervising a team of student workers while resolving complex technical issues.
 
@@ -68,7 +68,7 @@ Led IT support operations for campus-wide technology services, supervising a tea
 - Gained hands-on experience with Microsoft Windows and macOS technical administration
 
 ## Campus Minister (Part-Time)
-**Cru** | _August 2023 - Present_
+**Cru** | _August 2023 - August 2025_
 
 Serve as a campus minister while managing significant logistical and financial responsibilities for international trips.
 
