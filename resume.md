@@ -24,7 +24,7 @@
 ## Education
 
 ### Southern Methodist University
-- **Master of Science in Data Science** | GPA: 3.7 _(Expected December 2025)_
+- **Master of Science in Data Science** | GPA: 3.7 _(December 2025)_
   
   **Relevant Coursework:** Statistics for Data Science, Applied Statistics, Data Visualization, File Organization and Databases, Machine Learning, Data Mining, Natural Language Processing
 
@@ -109,27 +109,38 @@
 ## Technical Skills
 
 ### Programming Languages
-Python, R, Java, C++, JavaScript, SQL, SAS, HTML, JSON
+Python, R, Java, C++, JavaScript, TypeScript, SQL, SAS, HTML/CSS
 
 ### Machine Learning & AI
-Scikit-Learn, TensorFlow, Keras, Pandas, NLTK, PyTorch, Regression, Classification, Clustering, Decision Trees, Neural Networks, Natural Language Processing (NLU/NLG), Large Language Models, Generative AI, Deep Learning, OpenAI APIs, Groq, HuggingFace
+scikit-learn, PyTorch, TensorFlow, Keras, pandas, numpy, NLTK, Optuna, GridSearchCV, Regression, Classification, Clustering, Neural Networks (CNN/RNN/MLP), Transfer Learning, Natural Language Processing, Large Language Models, OpenAI APIs, Claude API (Anthropic), HuggingFace, Generative AI
 
-### Statistics and Data Science
-Data wrangling, data cleaning, feature engineering, data exploration, model selection, cloud deployment, client communication, experiment design, time series analysis and prediction
+### Data Science & Analytics
+Data wrangling, feature engineering, ETL pipelines, exploratory data analysis, statistical testing, model selection, hyperparameter tuning, cross-validation, time series analysis, Census/ACS data, geospatial analysis (OSM)
 
-### Database Management
-SQL, NoSQL, MySQL, MongoDB
+### Web Development & Frameworks
+Next.js 15/16, React 19, Astro 5, FastAPI, Express, TypeScript, Tailwind v4, Framer Motion, shadcn/ui, Bootstrap 5, HTML5/CSS3
 
-### Data Visualization & Web Development
-Tableau, PowerBI, Processing, P5.js, D3.js, Three.js, Excel, JavaScript, React, Dashboards, ggplot2
+### Databases & ORMs
+SQL, SQLite, PostgreSQL, MySQL, MongoDB, Prisma ORM, SQLAlchemy 2.0, SQLModel
+
+### APIs & Integrations
+OpenAI API (GPT, Whisper, TTS), Anthropic Claude API, Stripe, Clerk, Resend, Census Bureau ACS API, OpenStreetMap Overpass, Gumroad API, Twilio, SendGrid
 
 ### Cloud, DevOps & Deployment
-AWS (EC2, S3), GitHub, Docker, Google Cloud, Microsoft Azure
+Vercel, Cloudflare Pages, AWS (EC2, S3), GitHub Actions, Docker, Google Cloud, Microsoft Azure
+
+### Data Visualization
+matplotlib, seaborn, ggplot2, Tableau, Power BI, D3.js, P5.js, Three.js
+
+### Developer Tools
+Git, GitHub, pytest, APScheduler, ReportLab, WeasyPrint, FFmpeg, RMarkdown, RShiny, Jupyter Notebooks, Typer (CLI), Cursor IDE
 
 ### IT & Support
-Windows & macOS Administration, Microsoft Office and 365, Network Security, Multi-Factor Authentication, Active Directory, Communication and Customer Service
+Windows & macOS Administration, Microsoft 365, Active Directory, Network Security, Multi-Factor Authentication
 
 ## Projects
+
+### Academic Projects
 
 ### [Digital Translation in the AI Era](https://cdcastr0.github.io/projects/Digital_Translation)
 Built an application providing realistic-voice translations of YouTube videos using AI technology.
@@ -139,6 +150,46 @@ Analyzed market data to identify underserved niches by studying IBU and ABV rela
 
 ### [Ames, Iowa Housing Price Prediction](https://cdcastr0.github.io/projects/Ames_Housing_Price_Prediction)
 Developed regression models for the Kaggle Ames Housing competition and built an RShiny App to visualize neighborhood pricing.
+
+### Personal & Professional Projects
+
+**RE Wholesaler — Automated Real Estate Pipeline** (2026)
+- Full-stack automated wholesaling pipeline targeting distressed properties across 7 DFW counties
+- Python 3.12, FastAPI, SQLAlchemy 2.0 async, APScheduler (11 scheduled jobs), Pydantic v2
+- 7 SQLAlchemy models tracking leads, contacts, deals, outreach, documents, and buyers
+- Scrapers for foreclosure, tax lien, and probate records; skip tracing via xLeads; AVM pricing
+- ReportLab PDF contract generation; MaxDispo + InvestorLift buyer platform integration
+- Typer CLI with 15+ commands; pytest test suite for contracts and offer calculator modules
+
+**LoanReady — DSCR Calculator SaaS** (2026)
+- SaaS tool for real estate investors to calculate Debt Service Coverage Ratio from uploaded documents
+- Users upload bank statements and P&Ls; Claude Haiku extracts transactions and computes DSCR
+- Next.js 15, Prisma 5 (ORM), Clerk (authentication), Stripe (payments), shadcn/ui
+- Generates lender-ready PDF reports with transaction breakdowns and ratio analysis
+
+**Neighborhood Report Generator** (2026)
+- Python backend generating neighborhood intelligence reports from US Census ACS and OpenStreetMap data
+- Fetches demographics (poverty, income, education, language, race/ethnicity) via Census API (censusdis)
+- Counts community institutions (churches, schools, hospitals, libraries) via OSM Overpass API
+- Claude Haiku generates prose overview; WeasyPrint renders HTML to PDF; SQLModel caches by geography
+
+**Mark — AI Storage Negotiator** (2025)
+- Conversational AI agent that negotiates monthly storage unit rates on behalf of businesses
+- Claude claude-opus-4-6 with tool_use API: calls check_availability, get_pricing, apply_discount, send_confirmation
+- Next.js 14, Prisma 5, Resend (email confirmations), TypeScript
+
+**Neighborhood Insights** (2025–2026)
+- Content and data platform for real estate professionals; 43+ published articles on neighborhood analysis
+- Next.js 15, React 19, Tailwind v4, Framer Motion, Gumroad API (6 digital products)
+- Automated Vercel deployment via GitHub; full custom design system
+
+**COATX — Citizens of Addison Texas** (2026) [Client]
+- Civic website for a municipal organization built for the May 2026 Addison, TX election
+- Next.js 16, React 19, TypeScript, Tailwind v4; deployed on Vercel
+
+**Big Easy Limos** (2025–2026) [Client]
+- Website for a New Orleans limo service — UI/UX improvements, booking integration
+- Next.js 15, React 19, TypeScript, Tailwind v4, Resend, LimoBiz booking widget
 
 ## Research Interests
 - Technology's impact on society and culture
@@ -155,4 +206,4 @@ Developed regression models for the Kaggle Ames Housing competition and built an
 </footer>
 
 
-[← Back to Home](https://cdcastr0.github.io) | [Download PDF Resume](https://cdcastr0.github.io/assets/files/Christian.Castro.pdf) 
+[← Back to Home](https://cdcastr0.github.io) | [Download PDF Resume](https://cdcastr0.github.io/assets/files/Christian.Castro.pdf)
