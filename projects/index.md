@@ -79,6 +79,38 @@ Interactive educational platform visualizing how misinformation spreads through 
 
 ---
 
+---
+
+## Personal & Professional Projects
+
+### [RE Wholesaler — Automated Pipeline](https://cdcastr0.github.io/projects/REWholesaler)
+Full-stack automated real estate wholesaling system targeting distressed properties across 7 DFW counties. Continuous operation: public records scraping → lead scoring → multi-channel outreach → contract generation → buyer platform push.  
+**Stack:** Python 3.12, FastAPI, SQLAlchemy 2.0 async, APScheduler, ReportLab, Typer, React + Vite
+
+### [LoanReady — DSCR Calculator](https://cdcastr0.github.io/projects/LoanReady)
+SaaS tool for real estate investors. Upload bank statements and P&Ls; Claude Haiku extracts transactions and computes DSCR; get a lender-ready PDF report with Stripe-gated download.  
+**Stack:** Next.js 15, Prisma 5, Clerk, Stripe, Claude Haiku, shadcn/ui
+
+### [Mark — AI Storage Negotiator](https://cdcastr0.github.io/projects/MarkNegotiator)
+Conversational AI agent that negotiates storage unit pricing using Claude claude-opus-4-6 tool_use API — calls live pricing functions mid-conversation to stay grounded. Sends deal confirmations via Resend.  
+**Stack:** Next.js 14, Prisma 5, Claude claude-opus-4-6 (tool_use), Resend
+
+### [Neighborhood Report Generator](https://cdcastr0.github.io/projects/NeighborhoodReport)
+Python backend generating neighborhood intelligence reports from Census ACS and OpenStreetMap data. AI-written prose overview via Claude Haiku; web view and PDF output via WeasyPrint.  
+**Stack:** Python, FastAPI, censusdis, overpy, WeasyPrint, SQLModel, Claude Haiku
+
+### [Neighborhood Insights](https://cdcastr0.github.io/projects/NeighborhoodInsights)
+Content and data platform for real estate professionals — 43+ published articles, custom design system, 6 Gumroad digital products.  
+**Stack:** Next.js 15, Tailwind v4, Framer Motion, shadcn/ui, Gumroad API
+
+---
+
+## Client Projects
+
+- **[Big Easy Limos](https://www.bigeasylimos.com)** — Limo service website (New Orleans). Next.js 15, Tailwind v4, Resend, LimoBiz booking integration.
+- **COATX** — Civic website for Citizens of Addison Texas municipal organization, built for May 2026 election. Next.js 16, React 19, Vercel.
+- **Monaco Health** — Medical weight loss clinic website. Next.js 16, React 19, Tailwind v4, shadcn/ui.
+
 <footer class="site-footer">
   <p>&copy; 2025 Christian Castro. All rights reserved.</p>
 </footer>
